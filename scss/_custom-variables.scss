@@ -230,8 +230,7 @@ $nested-kbd-font-weight: bold !default;
 
 $list-inline-padding: 5px !default;
 
-$text-uppercase:    uppercase !default;
-$text-lowercase:    lowercase !default;
+$text-casing:    uppercase !default;
 
 // Components
 //
@@ -635,7 +634,7 @@ $label-danger-bg:             $brand-danger !default;
 $label-color:                 #fff !default;
 $label-link-hover-color:      #fff !default;
 $label-font-weight:           500 !default; // Custom
-$label-text-transform:        $text-uppercase !default; // Custom
+$label-text-transform:        $text-casing !default; // Custom
 
 
 // Modals

@@ -6103,6 +6103,7 @@ a.text-danger:focus, a.text-danger:hover {
   padding-right: 1.40625rem;
   color: #515862;
   text-align: right;
+  text-transform: uppercase;
 }
 
 .lead-out {

@@ -12,7 +12,7 @@
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  text-transform: uppercase; // Custom
+  text-transform: $text-casing; // Custom
   letter-spacing: 1px; // Custom
   border: $input-btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-xs, $line-height, $btn-border-radius);
@@ -174,14 +174,17 @@
 // For use with horizontal and inline forms, when you need the label text to
 // align with the form controls.
 .form-control-label {
-  padding: $input-padding-y $spacer-x;
+  padding: $input-padding-y $spacer-x; // Custom - $spacer-x
   margin-bottom: 0; // Override the `<label>` default
-  font-size: 12px;
+  font-size: 12px; // Custom
 }
+
+// Custom element
 .form-inverse-control-label {
-  width: 150px;
+  width: 150px; 
   color: $gray-blue-50;
   text-align: right;
+  text-transform: $text-casing;
   padding-right: $spacer-x * 1.5;
 }
 
@@ -195,6 +198,7 @@
   font-weight: $lead-out-font-weight;
   color: $gray-blue-50;
 }
+// Custom element
 a, a:focus {
   outline: $link-outline;
 }
