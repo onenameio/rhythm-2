@@ -6008,7 +6008,6 @@ a, a:focus {
   width: 100%;
   padding: .5rem 1.5rem;
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.5;
   color: #fff;
   background-color: #2b2e33;
@@ -6025,9 +6024,10 @@ a, a:focus {
 }
 
 .form-inverse-control:focus {
-  color: #2e2e2e;
-  background-color: #fff;
-  border-color: #fff;
+  font-weight: 300;
+  color: #fff;
+  background-color: #32373d;
+  border-color: #23262a;
   outline: none;
   -webkit-transition: all .15s ease-in-out;
        -o-transition: all .15s ease-in-out;

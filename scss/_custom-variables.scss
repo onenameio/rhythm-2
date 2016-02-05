@@ -445,12 +445,12 @@ $input-label-font-weight:        400 !default;            // Custom
 $input-label-text-transform:     $text-casing !default;   // Custom
 
 // Inverse forms - Custom
-$input-inverse-bg:                 $gray-blue-400 !default; // Custom
-$input-inverse-border-color:       $gray-blue-400 !default; // Custom
-$input-inverse-color:              $white !default;         // Custom
-$input-inverse-border-focus:       $white !default;         // Custom
-$input-inverse-label-font-weight:  400 !default;            // Custom
-$input-inverse-color-placeholder:  $gray-blue-50 !default;  // Custom
+$input-inverse-bg:                 $gray-blue-400 !default;        // Custom
+$input-inverse-border-color:       $gray-blue-400 !default;        // Custom
+$input-inverse-color:              $white !default;                // Custom
+$input-inverse-border-focus:       $gray-blue-500 !default;  // Custom
+$input-inverse-label-font-weight:  400 !default;                   // Custom
+$input-inverse-color-placeholder:  $gray-blue-50 !default;         // Custom
 
 // Form validation icons
 $form-icon-success: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==" !default;

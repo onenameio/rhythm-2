@@ -640,6 +640,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 ## Form inverse
 
 {% example html %}
+<div class="container" style="background-color: #23262a">
 <form>
   <fieldset class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -704,6 +705,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 {% endexample %}
 
 ## Using the Grid
