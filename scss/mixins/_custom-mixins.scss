@@ -22,7 +22,7 @@
 }
 @mixin form-inverse-control-focus() {
   &:focus {
-    border-color: $input-border-focus-inverse;
+    border-color: $input-inverse-border-focus;
     outline: none;
     background-color: $white;
     color: $gray-800;
