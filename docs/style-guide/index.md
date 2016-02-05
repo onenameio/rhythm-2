@@ -3,7 +3,7 @@ layout: docs
 group: style-guide
 ---
 
-<h1 class="bd-title">Grid</h1>
+<h1>Grid</h1>
 
 #### Stacked-to-horizontal
 
@@ -82,7 +82,7 @@ group: style-guide
 {% endexample %}
 </div>
 
-<h1 class="bd-title">Media Object</h1>
+<h1>Media Object</h1>
 
 {% example html %}
 <div class="media">
@@ -96,7 +96,7 @@ group: style-guide
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Responsive Utilities</h1>
+<h1>Responsive Utilities</h1>
 
 ## Available classes
 
@@ -313,7 +313,7 @@ Green checkmarks indicate the element **is visible** in your current viewport.
   </div>
 </div>
 
-<h1 class="bd-title">Typography</h1>
+<h1>Typography</h1>
 
 ## Headings
 
@@ -324,27 +324,27 @@ All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` cla
     <tbody>
       <tr>
         <td><h1>h1. Bootstrap heading</h1></td>
-        <td class="type-info">Semibold 36px</td>
+        <td>weight 200 2.25rem/36px</td>
       </tr>
       <tr>
         <td><h2>h2. Bootstrap heading</h2></td>
-        <td class="type-info">Semibold 30px</td>
+        <td>weight 200 1.875rem/30px</td>
       </tr>
       <tr>
         <td><h3>h3. Bootstrap heading</h3></td>
-        <td class="type-info">Semibold 24px</td>
+        <td>weight 200 1.625rem/26px</td>
       </tr>
       <tr>
         <td><h4>h4. Bootstrap heading</h4></td>
-        <td class="type-info">Semibold 18px</td>
+        <td>weight 200 1.25rem/20px</td>
       </tr>
       <tr>
         <td><h5>h5. Bootstrap heading</h5></td>
-        <td class="type-info">Semibold 14px</td>
+        <td>weight 200 1rem/16px</td>
       </tr>
       <tr>
         <td><h6>h6. Bootstrap heading</h6></td>
-        <td class="type-info">Semibold 12px</td>
+        <td>weight 200 0.875rem/14px</td>
       </tr>
     </tbody>
   </table>
@@ -404,7 +404,7 @@ Styling for common inline HTML5 elements.
 <p><em>This line rendered as italicized text.</em></p>
 {% endexample %}
 
-<h1 class="bd-title">Code</h1>
+<h1>Code</h1>
 
 ## Inline code
 
@@ -412,7 +412,7 @@ Styling for common inline HTML5 elements.
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endexample %}
 
-<h1 class="bd-title">Images</h1>
+<h1>Images</h1>
 
 ## Responsive images
 
@@ -426,7 +426,7 @@ Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` an
 <img src="..." class="img-fluid" alt="Responsive image">
 {% endhighlight %}
 
-<h1 class="bd-title">Tables</h1>
+<h1>Tables</h1>
 
 ## Basic table
 
@@ -534,7 +534,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 </table>
 {% endexample %}
 
-<h1 class="bd-title">Buttons</h1>
+<h1>Buttons</h1>
 
 ## Styles
 
@@ -561,7 +561,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 <button type="button" class="btn btn-link">Link</button>
 {% endexample %}
 
-<h1 class="bd-title">Forms</h1>
+<h1>Forms</h1>
 
 
 ## Form controls
@@ -833,7 +833,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Dropdowns</h1>
+<h1>Dropdowns</h1>
 
 ## Example
 
@@ -852,7 +852,7 @@ Wrap the dropdown's trigger and the dropdown menu within `.dropdown`, or another
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Alerts</h1>
+<h1>Alerts</h1>
 
 ## Examples
 
@@ -873,7 +873,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Cards</h1>
+<h1>Cards</h1>
 
 ## Example
 
@@ -958,7 +958,7 @@ Only applies to small devices and above.
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Navs</h1>
+<h1>Navs</h1>
 
 ## Base nav
 
@@ -999,7 +999,7 @@ Only applies to small devices and above.
 </nav>
 {% endexample %}
 
-<h1 class="bd-title">Navbar</h1>
+<h1>Navbar</h1>
 
 ## Example
 
@@ -1027,7 +1027,7 @@ Only applies to small devices and above.
 </nav>
 {% endexample %}
 
-<h1 class="bd-title">Progress</h1>
+<h1>Progress</h1>
 
 ## Basic Example
 
@@ -1050,7 +1050,7 @@ Progress bars use some of the same button and alert classes for consistent style
 <progress class="progress progress-danger" value="100" max="100">100%</progress>
 {% endexample %}
 
-<h1 class="bd-title">List Group</h1>
+<h1>List Group</h1>
 
 ## Basic example
 
@@ -1124,7 +1124,7 @@ Add nearly any HTML within, even for linked list groups like the one below.
 </div>
 {% endexample %}
 
-<h1 class="bd-title">Modal</h1>
+<h1>Modal</h1>
 
 
 ### Static example
@@ -1322,7 +1322,7 @@ Modals have two optional sizes, available via modifier classes to be placed on a
   </div>
 </div>
 
-<h1 class="bd-title">Tooltips</h1>
+<h1>Tooltips</h1>
 
 ### Static demo
 
