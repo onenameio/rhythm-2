@@ -324,27 +324,27 @@ All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` cla
     <tbody>
       <tr>
         <td><h1>h1. Bootstrap heading</h1></td>
-        <td>weight 200 2.25rem/36px</td>
+        <td class="type-info"><small>weight 400 - 2.25rem / 36px</small></td>
       </tr>
       <tr>
         <td><h2>h2. Bootstrap heading</h2></td>
-        <td>weight 200 1.875rem/30px</td>
+        <td class="type-info"><small>weight 400 - 1.875rem / 30px</small></td>
       </tr>
       <tr>
         <td><h3>h3. Bootstrap heading</h3></td>
-        <td>weight 200 1.625rem/26px</td>
+        <td class="type-info"><small>weight 400 - 1.625rem / 26px</small></td>
       </tr>
       <tr>
         <td><h4>h4. Bootstrap heading</h4></td>
-        <td>weight 200 1.25rem/20px</td>
+        <td class="type-info"><small>weight 400 - 1.25rem / 20px</small></td>
       </tr>
       <tr>
         <td><h5>h5. Bootstrap heading</h5></td>
-        <td>weight 200 1rem/16px</td>
+        <td class="type-info"><small>weight 400 - 1rem / 16px</small></td>
       </tr>
       <tr>
         <td><h6>h6. Bootstrap heading</h6></td>
-        <td>weight 200 0.875rem/14px</td>
+        <td class="type-info"><small>weight 400 - .875rem / 14px</small></td>
       </tr>
     </tbody>
   </table>
