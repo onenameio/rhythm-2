@@ -1828,9 +1828,9 @@ pre code {
 }
 
 .form-control:focus {
-  color: #fff;
-  background-color: #2e2e2e;
-  border-color: #2e2e2e;
+  color: #2e2e2e;
+  background-color: #fafafa;
+  border-color: #e6e6e6;
   outline: none;
   -webkit-transition: all .15s ease-in-out;
        -o-transition: all .15s ease-in-out;
@@ -5946,9 +5946,9 @@ a, a:focus {
 }
 
 .form-control:focus {
-  color: #fff;
-  background-color: #2e2e2e;
-  border-color: #2e2e2e;
+  color: #2e2e2e;
+  background-color: #fafafa;
+  border-color: #e6e6e6;
   outline: none;
   -webkit-transition: all .15s ease-in-out;
        -o-transition: all .15s ease-in-out;
@@ -6027,7 +6027,7 @@ a, a:focus {
   font-weight: 300;
   color: #fff;
   background-color: #32373d;
-  border-color: #23262a;
+  border-color: #3a3f46;
   outline: none;
   -webkit-transition: all .15s ease-in-out;
        -o-transition: all .15s ease-in-out;
@@ -6097,6 +6097,11 @@ a, a:focus {
   font-weight: 400;
   color: #515862;
   text-align: right;
+}
+
+label {
+  font-size: .75rem;
+  text-transform: uppercase;
 }
 
 .btn {

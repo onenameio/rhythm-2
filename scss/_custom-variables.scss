@@ -347,7 +347,7 @@ $input-border-radius:            $border-radius !default;
 $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
-$input-border-focus:             $gray-800 !default; // Custom
+$input-border-focus:             $gray-70 !default; // Custom
 $input-box-shadow-focus:         none !default;      // Custom
 
 $input-color-placeholder:        $gray-200 !default; // Custom
@@ -448,7 +448,7 @@ $input-label-text-transform:     $text-casing !default;   // Custom
 $input-inverse-bg:                 $gray-blue-400 !default;        // Custom
 $input-inverse-border-color:       $gray-blue-400 !default;        // Custom
 $input-inverse-color:              $white !default;                // Custom
-$input-inverse-border-focus:       $gray-blue-500 !default;  // Custom
+$input-inverse-border-focus:       $gray-blue-200 !default;  // Custom
 $input-inverse-label-font-weight:  400 !default;                   // Custom
 $input-inverse-color-placeholder:  $gray-blue-50 !default;         // Custom
 
