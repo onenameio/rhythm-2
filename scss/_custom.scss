@@ -6,12 +6,12 @@
   display: inline-block;
   font-weight: $btn-font-weight;
   text-align: center;
+  text-transform: $text-casing; // Custom
+  letter-spacing: 1px; // Custom
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  text-transform: $text-casing; // Custom
-  letter-spacing: 1px; // Custom
   border: $input-btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-xs, $line-height, $btn-border-radius);
   @include transition(all .15s ease-in-out);
@@ -179,11 +179,11 @@
 
 // Custom element
 .form-inverse-control-label {
-  width: 150px; 
+  width: 150px;
+  padding-right: $spacer-x * 1.5;
   color: $gray-blue-50;
   text-align: right;
   text-transform: $text-casing;
-  padding-right: $spacer-x * 1.5;
 }
 
 

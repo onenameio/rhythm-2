@@ -15,7 +15,8 @@
   "author": "Twitter, Inc.",
   "scripts": {
     "change-version": "node grunt/change-version.js",
-    "test": "grunt test"
+    "test": "grunt test",
+    "export": "node export.js --dest=../chord-desktop/node_modules/bootstrap/dist/"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
@@ -62,9 +63,11 @@
     "load-grunt-tasks": "~3.4.0",
     "markdown-it": "^5.0.0",
     "mq4-hover-shim": "^0.3.0",
+    "ncp": "^2.0.0",
     "npm-shrinkwrap": "^200.1.0",
     "shelljs": "^0.5.3",
-    "time-grunt": "^1.2.1"
+    "time-grunt": "^1.2.1",
+    "yargs": "^3.32.0"
   },
   "engines": {
     "node": ">=0.10.1"
