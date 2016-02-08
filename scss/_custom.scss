@@ -167,10 +167,16 @@ fieldset.form-group > label {
   font-size: $font-size-xs;                      // Custom
   text-transform: $text-casing;                  // Custom
 }
+fieldset.form-group.form-inverse > label {
+  color: $gray-blue-50;                          // Custom
+}
 div.form-group.row > label {
   padding-top: 4px;                              // Custom
   font-size: $font-size-xs;                      // Custom
   text-transform: $text-casing;                  // Custom
+}
+.text-muted-inverse {
+  color: $gray-blue-50;                          // Custom
 }
 
 

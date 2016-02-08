@@ -6104,10 +6104,18 @@ fieldset.form-group > label {
   text-transform: uppercase;
 }
 
+fieldset.form-group.form-inverse > label {
+  color: #515862;
+}
+
 div.form-group.row > label {
   padding-top: 4px;
   font-size: .75rem;
   text-transform: uppercase;
+}
+
+.text-muted-inverse {
+  color: #515862;
 }
 
 .btn {

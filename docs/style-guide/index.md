@@ -642,16 +642,16 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 {% example html %}
 <div class="container" style="background-color: #23262a">
 <form>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-inverse-control" id="exampleInputEmail1" placeholder="Enter email">
-    <small class="text-muted">We'll never share your email with anyone else.</small>
+    <small class="text-muted-inverse">We'll never share your email with anyone else.</small>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-inverse-control" id="exampleInputPassword1" placeholder="Password">
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleSelect1">Example select</label>
     <select class="form-inverse-control" id="exampleSelect1">
       <option>1</option>
@@ -661,7 +661,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       <option>5</option>
     </select>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleSelect2">Example multiple select</label>
     <select multiple class="form-inverse-control" id="exampleSelect2">
       <option>1</option>
@@ -671,14 +671,14 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       <option>5</option>
     </select>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleTextarea">Example textarea</label>
     <textarea class="form-inverse-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleInputFile">File input</label>
     <input type="file" class="form-control-file" id="exampleInputFile">
-    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    <small class="text-muted-inverse">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
   </fieldset>
   <div class="radio">
     <label>
