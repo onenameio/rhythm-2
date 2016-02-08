@@ -61,11 +61,11 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #2275d7 !default;
-$brand-success:             #090 !default;
-$brand-info:                #4a90e2 !default;
-$brand-warning:             #ffa500 !default;
-$brand-danger:              #f00 !default;
+$brand-primary:             #2275D7 !default;  // Custom
+$brand-success:             #009900 !default;  // Custom
+$brand-info:                #4A90E2 !default;  // Custom
+$brand-warning:             #FFA500 !default;  // Custom
+$brand-danger:              #FF0000 !default;  // Custom
 
 
 // Options
@@ -73,10 +73,10 @@ $brand-danger:              #f00 !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-flex:               false !default;
-$enable-rounded:            false !default;
+$enable-rounded:            false !default;  // Custom
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
-$enable-transitions:        true !default;
+$enable-transitions:        true !default;   // Custom
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
 
@@ -86,7 +86,7 @@ $enable-grid-classes:       true !default;
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 
-$spacer:   .9375rem !default;
+$spacer:   .9375rem !default;  // Custom
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 $spacers: (
@@ -115,7 +115,7 @@ $border-width: 1px !default;
 // Settings for the `<body>` element.
 
 $body-bg:    #fff !default;
-$body-color: $gray-800 !default;
+$body-color: $gray-800 !default;  // Custom
 
 
 // Links
@@ -126,7 +126,7 @@ $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
-$link-outline:          none !default;
+$link-outline:          none !default;  // Custom
 
 
 // Grid breakpoints
@@ -167,6 +167,14 @@ $grid-gutter-width: 1.875rem !default; // 30px
 //
 // Font, line-height, and color for body text, headings, and more.
 
+// Chosen typefase - Lato - https://www.google.com/fonts/specimen/Lato
+// Lato - Thin         100
+// Lato - Light        300
+// Lato - Normal       400
+// Lato - Bold         700
+// Lato - Ultra-Bold   900
+
+// Custom
 $font-family-sans-serif:     'Lato', sans-serif !default;
 $font-family-serif:          'Amiri', serif !default;
 $font-family-monospace:      'Source Code Pro', Courier New, monospace !default;
@@ -175,17 +183,21 @@ $font-family-base:           $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 16px !default;
 
-$font-size-base: .875rem !default; //Custom GL
-$font-size-lg:   1.25rem !default;
-$font-size-sm:   .875rem !default;
-$font-size-xs:   0.6875rem !default;
+$font-size-base: 1rem !default;      // 16px (base)
+$font-size-lg:   1.25rem !default;   // 20px
+$font-size-sm:   .875rem !default;   // 14px
+$font-size-xs:   .75rem !default;    // 12px
+$font-size-xxs:  .6875rem !default;  // 11px  Custom
+$font-size-xxss: .625rem !default;   // 10px  Custom
 
-$font-size-h1: 2.25rem !default; //Custom GL
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
+$line-height-base: 1.5 !default;
+
+$font-size-h1: 2.25rem !default;     // 2.25rem    36px   Custom
+$font-size-h2: 1.875rem !default;    // 1.875rem   30px   Custom
+$font-size-h3: 1.625rem !default;    // 1.625rem   26px   Custom
+$font-size-h4: 1.25rem !default;     // 1.25rem    20px   Custom
+$font-size-h5: 1rem !default;        // 1rem       16px   Custom
+$font-size-h6: .875rem !default;     // .875rem    14px   Custom
 
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
@@ -197,19 +209,17 @@ $display2-weight: 300 !default;
 $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
-$line-height: 1.5 !default;
-
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
-$headings-font-weight:   200 !default;
+$headings-font-weight:   400 !default;  // Custom
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
 $lead-font-size:   1.25rem !default;
 $lead-font-weight: 300 !default;
 
-$lead-out-font-size:    .875rem !default;
-$lead-out-font-weight:  500 !default;
+$lead-out-font-size:    .875rem !default; // Custom
+$lead-out-font-weight:  500 !default;     // Custom
 
 $text-muted: $gray-light !default;
 
@@ -230,7 +240,7 @@ $nested-kbd-font-weight: bold !default;
 
 $list-inline-padding: 5px !default;
 
-$text-casing:    uppercase !default;
+$text-casing:    uppercase !default;  // Custom
 
 // Components
 //
@@ -270,11 +280,11 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  2.5rem !default;
-$btn-padding-y:                  0.75rem !default;
-$btn-font-weight:                bold !default;
-$btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
-$btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
+$btn-padding-x:                  2.5rem !default;  // Custom
+$btn-padding-y:                  0.75rem !default; // Custom
+$btn-font-weight:                400 !default;     // Custom
+$btn-box-shadow:                 none !default;    // Custom
+$btn-active-box-shadow:          none !default;    // Custom
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -282,7 +292,7 @@ $btn-primary-border:             $btn-primary-bg !default;
 
 $btn-secondary-color:            $gray-dark !default;
 $btn-secondary-bg:               #fff !default;
-$btn-secondary-border:           $btn-secondary-bg !default;
+$btn-secondary-border:           $gray-50 !default;  // Custom
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
@@ -322,29 +332,25 @@ $btn-border-radius-sm:           $border-radius-sm !default;
 
 // Forms
 
-$input-padding-x:                1.5rem !default;
-$input-padding-y:                .5rem !default;
+$input-padding-x:                1.5rem !default;  // Custom
+$input-padding-y:                .5rem !default;   // Custom
 
-$input-bg:                       $gray-60 !default;
-$input-bg-inverse:               $gray-blue-400 !default;
+$input-bg:                       $gray-60 !default; // Custom
 $input-bg-disabled:              $gray-lighter !default;
 
-$input-color:                    $gray-800 !default;
-$input-color-inverse:            $white !default;
-$input-border-color:             $gray-60 !default;
-$input-border-color-inverse:     $gray-blue-400 !default;
+$input-color:                    $gray-800 !default; // Custom
+$input-border-color:             $gray-60 !default;  // Custom
 $input-btn-border-width:         $border-width !default; // For form controls and buttons
-$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,0) !default;
+$input-box-shadow:               none !default; // Custom
 
 $input-border-radius:            $border-radius !default;
 $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
-$input-border-focus:             $gray-800 !default;
-$input-border-focus-inverse:     $white !default;
-$input-box-shadow-focus:         rgba(102,175,233,0) !default;
+$input-border-focus:             $gray-70 !default; // Custom
+$input-box-shadow-focus:         none !default;      // Custom
 
-$input-color-placeholder:        $gray-400 !default;
+$input-color-placeholder:        $gray-200 !default; // Custom
 
 $input-padding-x-sm:             .75rem !default;
 $input-padding-y-sm:             .275rem !default;
@@ -352,7 +358,7 @@ $input-padding-y-sm:             .275rem !default;
 $input-padding-x-lg:             1.25rem !default;
 $input-padding-y-lg:             .75rem !default;
 
-$input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
+$input-height:                   (($font-size-base * $line-height-base) + ($input-padding-y * 2)) !default;  // Custom
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
@@ -430,6 +436,21 @@ $custom-file-button-label:  "Browse" !default;
 $custom-file-button-color:  $custom-file-color !default;
 $custom-file-button-bg:     #eee !default;
 
+// Input labels
+$input-label-padding-x:          1rem !default;     // Custom
+$input-label-padding-y:          .75rem !default;   // Custom
+
+$input-label-font-size:          $font-size-xs !default;  // Custom
+$input-label-font-weight:        400 !default;            // Custom
+$input-label-text-transform:     $text-casing !default;   // Custom
+
+// Inverse forms - Custom
+$input-inverse-bg:                 $gray-blue-400 !default;        // Custom
+$input-inverse-border-color:       $gray-blue-400 !default;        // Custom
+$input-inverse-color:              $white !default;                // Custom
+$input-inverse-border-focus:       $gray-blue-200 !default;  // Custom
+$input-inverse-label-font-weight:  400 !default;                   // Custom
+$input-inverse-color-placeholder:  $gray-blue-50 !default;         // Custom
 
 // Form validation icons
 $form-icon-success: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==" !default;
@@ -576,7 +597,7 @@ $card-spacer-x:            1.25rem !default;
 $card-spacer-y:            .75rem !default;
 $card-border-width:        1px !default;
 $card-border-radius:       $border-radius !default;
-$card-border-color:        #e5e5e5 !default;
+$card-border-color:        rgba(0,0,0,.125) !default;
 $card-border-radius-inner: $card-border-radius !default;
 $card-cap-bg:              #f5f5f5 !default;
 $card-bg:                  #fff !default;
@@ -633,8 +654,6 @@ $label-danger-bg:             $brand-danger !default;
 
 $label-color:                 #fff !default;
 $label-link-hover-color:      #fff !default;
-$label-font-weight:           500 !default; // Custom
-$label-text-transform:        $text-casing !default; // Custom
 
 
 // Modals
@@ -643,7 +662,7 @@ $label-text-transform:        $text-casing !default; // Custom
 $modal-inner-padding:         15px !default;
 
 $modal-title-padding:         15px !default;
-$modal-title-line-height:     $line-height !default;
+$modal-title-line-height:     $line-height-base !default;
 
 $modal-content-bg:               #fff !default;
 $modal-content-border-color:     rgba(0,0,0,.2) !default;
@@ -786,6 +805,4 @@ $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
-// Margin variables
-// Keep track of all margin variables in this section for a clear understanding of all margin settings
 
