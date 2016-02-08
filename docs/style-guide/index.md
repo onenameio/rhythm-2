@@ -542,7 +542,10 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 <button type="button" class="btn btn-primary">Primary</button>
 
-<!-- Secondary, outline button -->
+<!-- Primary Outline button -->
+<button type="button" class="btn btn-outline-primary">Primary Outline</button>
+
+<!-- Secondary -->
 <button type="button" class="btn btn-secondary">Secondary</button>
 
 <!-- Indicates a successful or positive action -->

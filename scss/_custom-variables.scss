@@ -282,31 +282,32 @@ $table-border-color:            $gray-lighter !default;
 
 $btn-padding-x:                  2.5rem !default;  // Custom
 $btn-padding-y:                  0.75rem !default; // Custom
+$btn-line-height:                1.25 !default;
 $btn-font-weight:                400 !default;     // Custom
-$btn-box-shadow:                 none !default;    // Custom
-$btn-active-box-shadow:          none !default;    // Custom
+$btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
+$btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
 
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
 $btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               #fff !default;
+$btn-secondary-bg:               $white !default;
 $btn-secondary-border:           $gray-50 !default;  // Custom
 
-$btn-info-color:                 #fff !default;
+$btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                $btn-info-bg !default;
 
-$btn-success-color:              #fff !default;
+$btn-success-color:              $white !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             $btn-success-bg !default;
 
-$btn-warning-color:              #fff !default;
+$btn-warning-color:              $white !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             $btn-warning-bg !default;
 
-$btn-danger-color:               #fff !default;
+$btn-danger-color:               $white !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              $btn-danger-bg !default;
 
