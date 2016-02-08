@@ -6099,6 +6099,11 @@ a, a:focus {
   text-align: right;
 }
 
+fieldset.form-group > label {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
 div.form-group.row > label {
   padding-top: 4px;
   font-size: .75rem;

@@ -163,8 +163,12 @@ a, a:focus {
   text-align: right;                             // Custom
   padding-right: $input-label-padding-x * 1.5;   // Custom
 }
+fieldset.form-group > label {
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
 div.form-group.row > label {
-  padding-top: 4px;
+  padding-top: 4px;                              // Custom
   font-size: $font-size-xs;                      // Custom
   text-transform: $text-casing;                  // Custom
 }
