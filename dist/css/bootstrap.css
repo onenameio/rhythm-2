@@ -6099,7 +6099,8 @@ a, a:focus {
   text-align: right;
 }
 
-label {
+div.form-group.row > label {
+  padding-top: 4px;
   font-size: .75rem;
   text-transform: uppercase;
 }
