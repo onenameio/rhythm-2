@@ -610,7 +610,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
   </fieldset>
   <fieldset class="form-group">
     <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile">
+    <input type="file" class="btn btn-primary btn-file" id="exampleInputFile">
     <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
   </fieldset>
   <div class="radio">
@@ -631,9 +631,11 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       Option three is disabled
     </label>
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
+  <div>
+    <label class="custom-control-input custom-checkbox">
+      <input type="checkbox">
+      <span class="custom-control-indicator"></span>
+      Check this custom checkbox
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
