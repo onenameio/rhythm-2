@@ -1809,7 +1809,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.25rem;
   font-size: 1rem;
   color: #2e2e2e;
   background-color: #f0f0f0;
@@ -1872,7 +1872,7 @@ pre code {
 }
 
 .form-control-label {
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.25rem;
   margin-bottom: 0;
 }
 
@@ -2022,7 +2022,7 @@ input[type="checkbox"].disabled {
 .form-control-success,
 .form-control-warning,
 .form-control-danger {
-  padding-right: 4.5rem;
+  padding-right: 3.75rem;
   background-repeat: no-repeat;
   background-position: center right .625rem;
   -webkit-background-size: 1.625rem 1.625rem;
@@ -3066,7 +3066,7 @@ input[type="button"].btn-block {
 }
 
 .input-group-addon {
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.25rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: normal;
@@ -5928,7 +5928,7 @@ a, a:focus {
 .form-control {
   display: block;
   width: 100%;
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.25rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #2e2e2e;
@@ -6006,7 +6006,7 @@ a, a:focus {
 .form-inverse-control {
   display: block;
   width: 100%;
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.25rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #fff;
@@ -6082,6 +6082,29 @@ a, a:focus {
   cursor: not-allowed;
 }
 
+fieldset.form-group > label {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+fieldset.form-group.form-inverse > label {
+  color: #515862;
+}
+
+label {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.check-radio-label-fix {
+  padding-top: .25rem;
+}
+
+.checkbox label, .radio label {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
 .form-control-label {
   height: 42px;
   padding: .75rem 1rem;
@@ -6097,21 +6120,6 @@ a, a:focus {
   font-weight: 400;
   color: #515862;
   text-align: right;
-}
-
-fieldset.form-group > label {
-  font-size: .75rem;
-  text-transform: uppercase;
-}
-
-fieldset.form-group.form-inverse > label {
-  color: #515862;
-}
-
-div.form-group.row > label {
-  padding-top: 4px;
-  font-size: .75rem;
-  text-transform: uppercase;
 }
 
 .text-muted-inverse {
@@ -6162,5 +6170,62 @@ div.form-group.row > label {
 .btn.disabled, .btn:disabled {
   cursor: not-allowed;
   opacity: .65;
+}
+
+.custom-file {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: 42px;
+  height: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.custom-file-input {
+  min-width: 14rem;
+  max-width: 100%;
+  margin: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.custom-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.custom-file-control::after {
+  content: "Choose file...";
+}
+
+.custom-file-control::before {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: 6;
+  display: block;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  content: "Browse";
+  background-color: #eee;
+  border: 1px solid #ddd;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -144,6 +144,28 @@ a, a:focus {
   }
 }
 
+fieldset.form-group > label {
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+fieldset.form-group.form-inverse > label {
+  color: $gray-blue-50;                          // Custom
+}
+label {
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+
+// Temporary fix. This is an issue that needs to be resolved with bootstrap v4 see issue - https://github.com/twbs/bootstrap/issues/19095
+.check-radio-label-fix {
+  padding-top: .25rem;                           // Custom
+}
+
+.checkbox label, .radio label {
+  font-size: $font-size-base;                    // Custom
+  text-transform: capitalize;                    // Custom
+}
+
 // For use with horizontal and inline forms, when you need the label text to
 // align with the form controls.
 .form-control-label {
@@ -163,20 +185,13 @@ a, a:focus {
   text-align: right;                             // Custom
   padding-right: $input-label-padding-x * 1.5;   // Custom
 }
-fieldset.form-group > label {
-  font-size: $font-size-xs;                      // Custom
-  text-transform: $text-casing;                  // Custom
-}
-fieldset.form-group.form-inverse > label {
-  color: $gray-blue-50;                          // Custom
-}
-div.form-group.row > label {
-  padding-top: 4px;                              // Custom
-  font-size: $font-size-xs;                      // Custom
-  text-transform: $text-casing;                  // Custom
-}
+
 .text-muted-inverse {
   color: $gray-blue-50;                          // Custom
+}
+
+input[type="checkbox"], input[type="radio"] {
+
 }
 
 
@@ -229,4 +244,68 @@ div.form-group.row > label {
 }
 
 
+// Custom forms
 
+// File
+//
+// Custom file input.
+.custom-file {
+  position: relative;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  height: 42px;                       // Custom
+  text-transform: $text-casing;       // Custom
+  max-width: 100%;
+  height: $custom-file-height;
+  cursor: pointer;
+}
+
+.custom-file-input {
+  min-width: $custom-file-width;
+  max-width: 100%;
+  margin: 0;
+  filter: alpha(opacity = 0);
+  opacity: 0;
+
+  &:focus ~ .custom-file-control {
+    @include box-shadow($custom-file-focus-box-shadow);
+  }
+}
+
+.custom-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: $custom-file-height;
+  padding: $custom-file-padding-x $custom-file-padding-y;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  user-select: none;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+
+  &::after {
+    content: $custom-file-placeholder;
+  }
+
+  &::before {
+    position: absolute;
+    top: -$custom-file-border-width;
+    right: -$custom-file-border-width;
+    bottom: -$custom-file-border-width;
+    z-index: 6;
+    display: block;
+    height: $custom-file-height;
+    padding: $custom-file-padding-x $custom-file-padding-y;
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: $custom-file-button-label;
+    background-color: $custom-file-button-bg;
+    border: $custom-file-border-width solid $custom-file-border-color;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+}

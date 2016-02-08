@@ -640,7 +640,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 ## Form inverse
 
 {% example html %}
-<div class="container" style="background-color: #23262a">
+<div class="container" style="background-color: #23262a; padding: 35px 25px;">
 <form>
   <fieldset class="form-group form-inverse">
     <label for="exampleInputEmail1">Email address</label>
@@ -728,7 +728,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2">Radios</label>
+    <label class="col-sm-2 check-radio-label-fix">Radios</label>
     <div class="col-sm-10">
       <div class="radio">
         <label>
@@ -736,7 +736,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
           Option one is this and that—be sure to include why it's great
         </label>
       </div>
-      <div class="radio">
+      <div class="radio ">
         <label>
           <input type="radio" name="gridRadios" id="gridRadios2" value="option2">
           Option two can be something else and selecting it will deselect option one
@@ -751,7 +751,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2">Checkbox</label>
+    <label class="col-sm-2 check-radio-label-fix">Checkbox</label>
     <div class="col-sm-10">
       <div class="checkbox">
         <label>
