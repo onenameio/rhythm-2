@@ -585,57 +585,42 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </fieldset>
   <fieldset class="form-group">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="exampleSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+    <select class="custom-select">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
   </fieldset>
   <fieldset class="form-group">
     <label for="exampleTextarea">Example textarea</label>
     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
-  <fieldset class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="btn btn-primary btn-file" id="exampleInputFile">
-    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-  </fieldset>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Option one is this and that&mdash;be sure to include why it's great
-    </label>
+  <div>
+    <label class="custom-file">
+  <input type="file" id="file" class="custom-file-input">
+  <span class="custom-file-control"></span>
+</label>
   </div>
   <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Option two can be something else and selecting it will deselect option one
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option One Is This And That—Be Sure To Include Why It's Great</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-      Option three is disabled
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" disabled>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
-  <div>
-    <label class="custom-control-input custom-checkbox">
-      <input type="checkbox">
+  <div class="checkbox">
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input">
       <span class="custom-control-indicator"></span>
-      Check this custom checkbox
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -680,32 +665,29 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     <label for="exampleTextarea">Example textarea</label>
     <textarea class="form-inverse-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
-  <fieldset class="form-group form-inverse">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile">
-    <small class="text-muted-inverse">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-  </fieldset>
+  <label class="file">
+    <input type="file" id="file">
+    <span class="file-custom"></span>
+  </label>
   <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Option one is this and that&mdash;be sure to include why it's great
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Option two can be something else and selecting it will deselect option one
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option One Is This And That—Be Sure To Include Why It's Great</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-      Option three is disabled
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" disabled>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
