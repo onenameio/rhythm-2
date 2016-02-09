@@ -6048,6 +6048,30 @@ h1.type-inverse, h2.type-inverse, h3.type-inverse, h4.type-inverse, h5.type-inve
   color: #fff;
 }
 
+h1 {
+  margin-bottom: 1.40625rem;
+}
+
+h2 {
+  margin-bottom: 1.40625rem;
+}
+
+h3 {
+  margin-bottom: 1.40625rem;
+}
+
+h4 {
+  margin-bottom: 1.40625rem;
+}
+
+h5 {
+  margin-bottom: 1.40625rem;
+}
+
+h6 {
+  margin-bottom: 1.40625rem;
+}
+
 .lead-out {
   font-size: .875rem;
   font-weight: 500;
