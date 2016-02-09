@@ -667,31 +667,31 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     </label>
   </fieldset>
   <div class="radio">
-    <label class="custom-control custom-radio">
-      <input id="radio1" name="radio" type="radio" class="custom-control-input">
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
+    <label class="custom-control-inverse custom-radio-inverse">
+      <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option one is this and that&mdash;be sure to include why it's great</span>
     </label>
   </div>
   <div class="radio">
-    <label class="custom-control custom-radio">
-      <input id="radio1" name="radio" type="radio" class="custom-control-input">
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
+    <label class="custom-control-inverse custom-radio-inverse">
+      <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option two can be something else and selecting it will deselect option one</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" disabled>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Option three is disabled</span>
+    <label class="custom-control-inverse custom-checkbox-inverse">
+      <input type="checkbox" class="custom-control-inverse-input" disabled>
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option three is disabled</span>
     </label>
   </div>
   <div class="checkbox">
-    <label class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input">
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Check this custom checkbox</span>
+    <label class="custom-control-inverse custom-checkbox-inverse">
+      <input type="checkbox" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

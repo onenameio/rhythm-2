@@ -219,7 +219,7 @@ fieldset.form-group.form-inverse > label {
   max-width: 100%;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   padding-right: $custom-select-padding-x \9;
-  color: $input-color;                       // Custom
+  color: $input-color;                          // Custom
   vertical-align: middle;
   background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-bg
   background-image: none \9;
@@ -229,15 +229,16 @@ fieldset.form-group.form-inverse > label {
   // Use vendor prefixes as `appearance` isn't part of the CSS spec.
   -moz-appearance: none;
   -webkit-appearance: none;
-  @include transition(all .15s ease-in-out);   // Custom
+  @include transition(all .15s ease-in-out);     // Custom
 
  &:focus,
  &:hover {
-    border-color: $input-border-focus;        // Custom
-    background-color: $gray-50;               // Custom
-    color: $gray-800;                         // Custom
+    border-color: $input-border-focus;           // Custom
+    background-color: $gray-50;                  // Custom
+    color: $gray-800;                            // Custom
     outline: none;
     @include box-shadow($custom-select-focus-box-shadow);
+    @include transition(all .15s ease-in-out);   // Custom
   }
 
   // Hides the default caret in IE11
@@ -318,6 +319,110 @@ fieldset.form-group.form-inverse > label {
 
 // Custom Forms (Inverse)
 //
+// Custom Forms
+//
+
+.custom-control-inverse {
+  color: $white;                                  // Custom
+  font-weight: $input-inverse-label-font-weight;  // Custom
+  position: relative;
+  display: inline;
+  padding-left: $custom-control-gutter;
+
+  + .custom-control {
+    margin-left: $custom-control-spacer-x;
+  }
+}
+
+.custom-control-inverse-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:checked ~ .custom-control-inverse-indicator {
+    color: $custom-control-checked-indicator-color;
+    background-color: $custom-control-checked-indicator-bg;
+    @include box-shadow($custom-control-checked-indicator-box-shadow);
+  }
+
+  &:focus ~ .custom-control-inverse-indicator {
+    // the mixin is not used here to make sure there is feedback
+    box-shadow: $custom-control-focus-indicator-box-shadow;
+  }
+
+  &:active ~ .custom-control-inverse-indicator {
+    color: $custom-control-active-indicator-color;
+    background-color: $custom-control-active-indicator-bg;
+    @include box-shadow($custom-control-active-indicator-box-shadow);
+  }
+
+  &:disabled {
+    ~ .custom-control-inverse-indicator {
+      cursor: $custom-control-disabled-cursor;
+      background-color: $custom-control-inverse-disabled-indicator-bg;
+    }
+
+    ~ .custom-control-inverse-description {
+      color: $custom-control-inverse-disabled-description-color;
+      cursor: $custom-control-disabled-cursor;
+      font-weight: $input-label-font-weight;     // Custom
+    }
+  }
+}
+
+// Custom indicator
+//
+// Generates a shadow element to create our makeshift checkbox/radio background.
+
+.custom-control-inverse-indicator {
+  position: absolute;
+  top: .0625rem;
+  left: 0;
+  display: block;
+  width: $custom-control-indicator-size;
+  height: $custom-control-indicator-size;
+  pointer-events: none;
+  user-select: none;
+  background-color: $gray-blue-100;          // Custom
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $custom-control-indicator-bg-size;
+  @include box-shadow($custom-control-indicator-box-shadow);
+}
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+
+.custom-checkbox-inverse {
+  .custom-control-inverse-indicator {
+    @include border-radius($custom-checkbox-radius);
+  }
+
+  .custom-control-inverse-input:checked ~ .custom-control-inverse-indicator {
+    background-image: url(#{$custom-checkbox-checked-icon});
+  }
+
+  .custom-control-inverse-input:indeterminate ~ .custom-control-inverse-indicator {
+    background-color: $custom-checkbox-indeterminate-bg;
+    background-image: url(#{$custom-checkbox-indeterminate-icon});
+    @include box-shadow($custom-checkbox-indeterminate-box-shadow);
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio-inverse {
+  .custom-control-inverse-indicator {
+    border-radius: $custom-radio-radius;
+  }
+
+  .custom-control-inverse-input:checked ~ .custom-control-inverse-indicator {
+    background-image: url(#{$custom-radio-checked-icon});
+  }
+}
 
 // Select
 
@@ -347,6 +452,7 @@ fieldset.form-group.form-inverse > label {
     font-weight: $input-inverse-label-font-weight;  // Custom
     outline: none;
     @include box-shadow($custom-select-focus-box-shadow);
+    @include transition(all .15s ease-in-out);      // Custom
   }
   // Hides the default caret in IE11
   &::-ms-expand {
