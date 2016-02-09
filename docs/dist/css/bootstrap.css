@@ -6012,6 +6012,7 @@ a, a:focus {
   width: 100%;
   padding: .5rem 1.25rem;
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5;
   color: #fff;
   background-color: #2b2e33;
@@ -6030,8 +6031,8 @@ a, a:focus {
 .form-inverse-control:focus {
   font-weight: 300;
   color: #fff;
-  background-color: #32373d;
-  border-color: #3a3f46;
+  background-color: #3a3f46;
+  border-color: #42484f;
   outline: none;
   -webkit-transition: all .15s ease-in-out;
        -o-transition: all .15s ease-in-out;
@@ -6235,6 +6236,7 @@ label {
   -webkit-appearance: none;
   padding: .5rem 2.25rem .5rem 1.25rem;
   padding-right: 1.25rem \9;
+  font-weight: 300;
   color: #fff;
   vertical-align: middle;
   background: #32373d url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUAgMAAAD5DFXkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFBRTNFMDNDNzcwMTFFNUIwNUM5M0IwMzhENTZERkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFBRTNFMDRDNzcwMTFFNUIwNUM5M0IwMzhENTZERkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUFFM0UwMUM3NzAxMUU1QjA1QzkzQjAzOEQ1NkRGRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUFFM0UwMkM3NzAxMUU1QjA1QzkzQjAzOEQ1NkRGRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Plbf/wsAAAAMUExURQAAAGZmZmZmZszMzF/IoNMAAAADdFJOUwB/gL9pIscAAABFSURBVAgdBcExAYAgAATAw4XBEEawAs2kGRWMYAgHFnnvKA31xvHi+ihJU5Pbkbyu5AMAACNZzmTak8eWdMbCObE/2LofCTof4TvEpdkAAAAASUVORK5CYII=) no-repeat right 1.25rem center;
@@ -6247,9 +6249,10 @@ label {
 }
 
 .custom-select-inverse:focus, .custom-select-inverse:hover {
-  color: #2e2e2e;
-  background-color: #fafafa;
-  border-color: #e6e6e6;
+  font-weight: 300;
+  color: #fff;
+  background-color: #3a3f46;
+  border-color: #42484f;
   outline: none;
 }
 

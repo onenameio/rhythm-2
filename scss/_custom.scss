@@ -89,6 +89,7 @@ a, a:focus {
   padding: $input-padding-y $input-padding-x;
   font-size: $font-size-base;
   line-height: $line-height-base;
+  font-weight: 300;                            // Custom
   color: $input-inverse-color;                 // Custom
   background-color: $input-inverse-bg;
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
@@ -324,6 +325,7 @@ input[type="checkbox"], input[type="radio"] {
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   padding-right: $custom-select-padding-x \9;
   color: $white;                             // Custom
+  font-weight: 300;                          // Custom
   vertical-align: middle;
   background: $custom-select-inverse-bg url(#{$custom-select-inverse-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-inverse-bg
   background-image: none \9;
@@ -336,13 +338,13 @@ input[type="checkbox"], input[type="radio"] {
 
  &:focus,
  &:hover {
-    border-color: $input-border-focus;        // Custom
-    background-color: $gray-50;               // Custom
-    color: $gray-800;                         // Custom
+    border-color: $input-inverse-border-focus;    // Custom
+    background-color: $gray-blue-200;          // Custom
+    color: $white;                                        // Custom
+    font-weight: 300;                                     // Custom
     outline: none;
     @include box-shadow($custom-select-focus-box-shadow);
   }
-
   // Hides the default caret in IE11
   &::-ms-expand {
     opacity: 0;
