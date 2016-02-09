@@ -62,7 +62,7 @@ a, a:focus {
     font-size: $font-size-xs;                               // Custom
     padding: .25rem 0 0 0;                                  // Custom
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    opacity: 0;
   }
 
   // Disabled and read-only inputs
@@ -124,7 +124,7 @@ a, a:focus {
     font-size: $font-size-xs;                 // Custom
     padding: .25rem 0 0 0;                    // Custom
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    opacity: 0;
   }
 
   // Disabled and read-only inputs
@@ -142,6 +142,29 @@ a, a:focus {
   &:disabled {
     cursor: $cursor-disabled;
   }
+}
+
+fieldset.form-group > label {
+  color: $gray-400;                              // Custom
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+fieldset.form-group.form-inverse > label {
+  color: $gray-blue-50;                          // Custom
+}
+label {
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+
+// Temporary fix. This is an issue that needs to be resolved with bootstrap v4 see issue - https://github.com/twbs/bootstrap/issues/19095
+.check-radio-label-fix {
+  padding-top: .25rem;                           // Custom
+}
+
+.checkbox label, .radio label {
+  font-size: $font-size-base;                    // Custom
+  text-transform: capitalize;                    // Custom
 }
 
 // For use with horizontal and inline forms, when you need the label text to
@@ -163,59 +186,84 @@ a, a:focus {
   text-align: right;                             // Custom
   padding-right: $input-label-padding-x * 1.5;   // Custom
 }
-label {
-  font-size: $font-size-xs;                      // Custom
-  text-transform: $text-casing;                  // Custom
+
+.text-muted-inverse {
+  color: $gray-blue-50;                          // Custom
+}
+
+input[type="checkbox"], input[type="radio"] {
+
 }
 
 
-// Buttons
+// Custom forms
 
-.btn {
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// http://primercss.io.
+//
+// Includes IE9-specific hacks (noted by ` \9`).
+
+.custom-select {
   display: inline-block;
-  font-weight: $btn-font-weight;
-  height: 42px;  // Custom
-  text-align: center;
-  white-space: nowrap;
+  max-width: 100%;
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding-right: $custom-select-padding-x \9;
+  color: $input-color;                       // Custom
   vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  text-transform: $text-casing; // Custom
-  letter-spacing: 1px;          // Custom
-  border: $input-btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-xxs, $line-height-base, $btn-border-radius);  // Custom - $font-size-xxs
-  @include transition(all .15s ease-in-out); // Custom
+  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $input-bg
+  background-image: none \9;
+  background-size: $custom-select-bg-size;
+  border: $custom-select-border-width solid $custom-select-border-color;
+  @include border-radius($custom-select-border-radius);
+  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
+  -moz-appearance: none;
+  -webkit-appearance: none;
 
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus();
-    }
+ &:focus {
+    border-color: $input-border-focus;        // Custom
+    background-color: $gray-50;               // Custom
+    color: $gray-800;                         // Custom
+    outline: none;
+    @include box-shadow($custom-select-focus-box-shadow);
   }
 
-  @include hover-focus {
-    text-decoration: none;
-  }
-  &.focus {
-    text-decoration: none;
-  }
-
-  &:active,
-  &.active {
-    background-image: none;
-    outline: 0;
-    @include box-shadow($btn-active-box-shadow);
-  }
-
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
   }
 }
 
+.custom-select-sm {
+  padding-top: $custom-select-padding-y;
+  padding-bottom: $custom-select-padding-y;
+  font-size: $custom-select-sm-font-size;
 
+  // &:not([multiple]) {
+  //   height: 26px;
+  //   min-height: 26px;
+  // }
+}
 
+// File
+//
+// Custom file input.
+
+.custom-file {
+  text-transform: capitalize!important;        // Custom
+  font-size: $font-size-base!important;        // Custom
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: $custom-file-height;
+  cursor: pointer;
+}
+
+.custom-file-control::before {
+  text-transform: $text-casing;                // Custom
+  font-size: $font-size-xxs;                   // Custom
+  letter-spacing: 1px;                         // Custom
+  border: 1px solid $brand-primary;
+  padding: .6875rem 2.5rem .75rem 2.5rem;
+}

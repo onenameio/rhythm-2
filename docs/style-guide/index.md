@@ -542,7 +542,10 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 <button type="button" class="btn btn-primary">Primary</button>
 
-<!-- Secondary, outline button -->
+<!-- Primary Outline button -->
+<button type="button" class="btn btn-outline-primary">Primary Outline</button>
+
+<!-- Secondary -->
 <button type="button" class="btn btn-secondary">Secondary</button>
 
 <!-- Indicates a successful or positive action -->
@@ -582,23 +585,11 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </fieldset>
   <fieldset class="form-group">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="exampleSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="custom-select">
+      <option selected>Open this select menu</option>
+      <option style="color: black;" value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
     </select>
   </fieldset>
   <fieldset class="form-group">
@@ -606,31 +597,37 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
   <fieldset class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile">
-    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    <label class="custom-file">
+      <input type="file" id="file" class="custom-file-input">
+      <span class="custom-file-control"></span>
+    </label>
   </fieldset>
   <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Option one is this and that&mdash;be sure to include why it's great
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
     </label>
   </div>
   <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Option two can be something else and selecting it will deselect option one
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-      Option three is disabled
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" disabled>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option three is disabled</span>
     </label>
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -640,18 +637,18 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 ## Form inverse
 
 {% example html %}
-<div class="container" style="background-color: #23262a">
+<div class="container" style="background-color: #23262a; padding: 35px 25px;">
 <form>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-inverse-control" id="exampleInputEmail1" placeholder="Enter email">
-    <small class="text-muted">We'll never share your email with anyone else.</small>
+    <small class="text-muted-inverse">We'll never share your email with anyone else.</small>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-inverse-control" id="exampleInputPassword1" placeholder="Password">
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleSelect1">Example select</label>
     <select class="form-inverse-control" id="exampleSelect1">
       <option>1</option>
@@ -661,7 +658,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       <option>5</option>
     </select>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleSelect2">Example multiple select</label>
     <select multiple class="form-inverse-control" id="exampleSelect2">
       <option>1</option>
@@ -671,36 +668,33 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       <option>5</option>
     </select>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleTextarea">Example textarea</label>
     <textarea class="form-inverse-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
-  <fieldset class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile">
-    <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-  </fieldset>
+  <label class="file">
+    <input type="file" id="file">
+    <span class="file-custom"></span>
+  </label>
   <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Option one is this and that&mdash;be sure to include why it's great
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Option two can be something else and selecting it will deselect option one
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Option One Is This And That—Be Sure To Include Why It's Great</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-      Option three is disabled
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" disabled>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -728,7 +722,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2">Radios</label>
+    <label class="col-sm-2 check-radio-label-fix">Radios</label>
     <div class="col-sm-10">
       <div class="radio">
         <label>
@@ -736,7 +730,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
           Option one is this and that—be sure to include why it's great
         </label>
       </div>
-      <div class="radio">
+      <div class="radio ">
         <label>
           <input type="radio" name="gridRadios" id="gridRadios2" value="option2">
           Option two can be something else and selecting it will deselect option one
@@ -751,7 +745,7 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2">Checkbox</label>
+    <label class="col-sm-2 check-radio-label-fix">Checkbox</label>
     <div class="col-sm-10">
       <div class="checkbox">
         <label>
