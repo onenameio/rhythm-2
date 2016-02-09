@@ -3,7 +3,9 @@
 // Usage. place code in chronological order as seen in bootstrap.scss
 
 
-// Type
+// -- Type --
+//
+//
 
 // Custom element
 .lead-out {
@@ -17,7 +19,9 @@ a, a:focus {
 }
 
 
-// Forms
+// -- Forms --
+//
+//
 
 .form-control {
   display: block;
@@ -81,6 +85,44 @@ a, a:focus {
     cursor: $cursor-disabled;
   }
 }
+
+fieldset.form-group > label {
+  color: $gray-400;                              // Custom
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+
+
+label {
+  font-size: $font-size-xs;                      // Custom
+  text-transform: $text-casing;                  // Custom
+}
+
+// Temporary fix. This is an issue that needs to be resolved with bootstrap v4 see issue - https://github.com/twbs/bootstrap/issues/19095
+.check-radio-label-fix {
+  padding-top: .25rem;                           // Custom
+}
+
+.checkbox label, .radio label {
+  font-size: $font-size-base;                    // Custom
+  text-transform: capitalize;                    // Custom
+}
+
+// For use with horizontal and inline forms, when you need the label text to
+// align with the form controls.
+.form-control-label {
+  padding: $input-label-padding-y $input-label-padding-x;  // Custom - $input-label-padding-y $input-label-padding-x
+  margin-bottom: 0; // Override the `<label>` default
+  font-size: $input-label-font-size;                       // Custom
+  font-weight: $input-label-font-weight;                   // Custom
+  text-transform: $input-label-text-transform;             // Custom
+  height: 42px;
+}
+
+
+// Forms (Inverse)
+//
+
 .form-inverse-control {
   display: block;
   width: 100%;
@@ -89,6 +131,7 @@ a, a:focus {
   padding: $input-padding-y $input-padding-x;
   font-size: $font-size-base;
   line-height: $line-height-base;
+  font-weight: 300;                            // Custom
   color: $input-inverse-color;                 // Custom
   background-color: $input-inverse-bg;
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
@@ -143,39 +186,8 @@ a, a:focus {
     cursor: $cursor-disabled;
   }
 }
-
-fieldset.form-group > label {
-  color: $gray-400;                              // Custom
-  font-size: $font-size-xs;                      // Custom
-  text-transform: $text-casing;                  // Custom
-}
 fieldset.form-group.form-inverse > label {
   color: $gray-blue-50;                          // Custom
-}
-label {
-  font-size: $font-size-xs;                      // Custom
-  text-transform: $text-casing;                  // Custom
-}
-
-// Temporary fix. This is an issue that needs to be resolved with bootstrap v4 see issue - https://github.com/twbs/bootstrap/issues/19095
-.check-radio-label-fix {
-  padding-top: .25rem;                           // Custom
-}
-
-.checkbox label, .radio label {
-  font-size: $font-size-base;                    // Custom
-  text-transform: capitalize;                    // Custom
-}
-
-// For use with horizontal and inline forms, when you need the label text to
-// align with the form controls.
-.form-control-label {
-  padding: $input-label-padding-y $input-label-padding-x;  // Custom - $input-label-padding-y $input-label-padding-x
-  margin-bottom: 0; // Override the `<label>` default
-  font-size: $input-label-font-size;                       // Custom
-  font-weight: $input-label-font-weight;                   // Custom
-  text-transform: $input-label-text-transform;             // Custom
-  height: 42px;
 }
 
 // Custom element
@@ -191,18 +203,15 @@ label {
   color: $gray-blue-50;                          // Custom
 }
 
-input[type="checkbox"], input[type="radio"] {
-
-}
 
 
-// Custom forms
+// -- CUSTOM FORMS --
+//
+//
 
 // Select
 //
-// Replaces the browser default select with a custom one, mostly pulled from
-// http://primercss.io.
-//
+// Replaces the browser default select with a custom one, mostly pulled from http://primercss.io.
 // Includes IE9-specific hacks (noted by ` \9`).
 
 .custom-select {
@@ -210,23 +219,26 @@ input[type="checkbox"], input[type="radio"] {
   max-width: 100%;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   padding-right: $custom-select-padding-x \9;
-  color: $input-color;                       // Custom
+  color: $input-color;                          // Custom
   vertical-align: middle;
-  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $input-bg
+  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-bg
   background-image: none \9;
   background-size: $custom-select-bg-size;
-  border: $custom-select-border-width solid $custom-select-border-color;
+  border: $custom-select-border-width solid $custom-select-border-color;    // Custom - $custom-select-border-color
   @include border-radius($custom-select-border-radius);
   // Use vendor prefixes as `appearance` isn't part of the CSS spec.
   -moz-appearance: none;
   -webkit-appearance: none;
+  @include transition(all .15s ease-in-out);     // Custom
 
- &:focus {
-    border-color: $input-border-focus;        // Custom
-    background-color: $gray-50;               // Custom
-    color: $gray-800;                         // Custom
+ &:focus,
+ &:hover {
+    border-color: $input-border-focus;           // Custom
+    background-color: $gray-50;                  // Custom
+    color: $gray-800;                            // Custom
     outline: none;
     @include box-shadow($custom-select-focus-box-shadow);
+    @include transition(all .15s ease-in-out);   // Custom
   }
 
   // Hides the default caret in IE11
@@ -235,20 +247,7 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
-.custom-select-sm {
-  padding-top: $custom-select-padding-y;
-  padding-bottom: $custom-select-padding-y;
-  font-size: $custom-select-sm-font-size;
-
-  // &:not([multiple]) {
-  //   height: 26px;
-  //   min-height: 26px;
-  // }
-}
-
 // File
-//
-// Custom file input.
 
 .custom-file {
   text-transform: capitalize!important;        // Custom
@@ -260,10 +259,268 @@ input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
 }
 
-.custom-file-control::before {
-  text-transform: $text-casing;                // Custom
-  font-size: $font-size-xxs;                   // Custom
-  letter-spacing: 1px;                         // Custom
-  border: 1px solid $brand-primary;
-  padding: .6875rem 2.5rem .75rem 2.5rem;
+.custom-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: $custom-file-height;
+  padding: $custom-file-padding-x $custom-file-padding-y;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  user-select: none;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+  @include transition(all .15s ease-in-out);   // Custom
+
+  &::after {
+    content: $custom-file-placeholder;
+  }
+
+  &::before {
+    position: absolute;
+    top: -$custom-file-border-width;
+    right: -$custom-file-border-width;
+    bottom: -$custom-file-border-width;
+    z-index: 6;
+    display: block;
+    height: $custom-file-height;
+    padding: $custom-file-padding;               // Custom
+    text-transform: $text-casing;                // Custom
+    font-size: $font-size-xxs;                   // Custom
+    letter-spacing: 1px;                         // Custom  
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: $custom-file-button-label;
+    background-color: $custom-file-button-bg;    // Custom
+    border: $custom-file-border-width solid $brand-primary;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+
+  &:hover::before {
+    color: $white;
+      background-color: darken($brand-primary, 10%);
+          border-color: darken($brand-primary, 10%);
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $input-border-focus;                       // Custom
+    background-color: $gray-50;                              // Custom
+    color: $gray-800;                                        // Custom
+    outline: none;                                           // Custom
+    @include box-shadow($custom-select-focus-box-shadow);    // Custom
+  }
 }
+
+
+// Custom Forms (Inverse)
+//
+// Custom Forms
+//
+
+.custom-control-inverse {
+  color: $white;                                  // Custom
+  font-weight: $input-inverse-label-font-weight;  // Custom
+  position: relative;
+  display: inline;
+  padding-left: $custom-control-gutter;
+
+  + .custom-control {
+    margin-left: $custom-control-spacer-x;
+  }
+}
+
+.custom-control-inverse-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:checked ~ .custom-control-inverse-indicator {
+    color: $custom-control-checked-indicator-color;
+    background-color: $custom-control-checked-indicator-bg;
+    @include box-shadow($custom-control-checked-indicator-box-shadow);
+  }
+
+  &:focus ~ .custom-control-inverse-indicator {
+    // the mixin is not used here to make sure there is feedback
+    box-shadow: $custom-control-focus-indicator-box-shadow;
+  }
+
+  &:active ~ .custom-control-inverse-indicator {
+    color: $custom-control-active-indicator-color;
+    background-color: $custom-control-active-indicator-bg;
+    @include box-shadow($custom-control-active-indicator-box-shadow);
+  }
+
+  &:disabled {
+    ~ .custom-control-inverse-indicator {
+      cursor: $custom-control-disabled-cursor;
+      background-color: $custom-control-inverse-disabled-indicator-bg;
+    }
+
+    ~ .custom-control-inverse-description {
+      color: $custom-control-inverse-disabled-description-color;
+      cursor: $custom-control-disabled-cursor;
+      font-weight: $input-label-font-weight;     // Custom
+    }
+  }
+}
+
+// Custom indicator
+//
+// Generates a shadow element to create our makeshift checkbox/radio background.
+
+.custom-control-inverse-indicator {
+  position: absolute;
+  top: .0625rem;
+  left: 0;
+  display: block;
+  width: $custom-control-indicator-size;
+  height: $custom-control-indicator-size;
+  pointer-events: none;
+  user-select: none;
+  background-color: $gray-blue-100;          // Custom
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $custom-control-indicator-bg-size;
+  @include box-shadow($custom-control-indicator-box-shadow);
+}
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+
+.custom-checkbox-inverse {
+  .custom-control-inverse-indicator {
+    @include border-radius($custom-checkbox-radius);
+  }
+
+  .custom-control-inverse-input:checked ~ .custom-control-inverse-indicator {
+    background-image: url(#{$custom-checkbox-checked-icon});
+  }
+
+  .custom-control-inverse-input:indeterminate ~ .custom-control-inverse-indicator {
+    background-color: $custom-checkbox-indeterminate-bg;
+    background-image: url(#{$custom-checkbox-indeterminate-icon});
+    @include box-shadow($custom-checkbox-indeterminate-box-shadow);
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio-inverse {
+  .custom-control-inverse-indicator {
+    border-radius: $custom-radio-radius;
+  }
+
+  .custom-control-inverse-input:checked ~ .custom-control-inverse-indicator {
+    background-image: url(#{$custom-radio-checked-icon});
+  }
+}
+
+// Select
+
+.custom-select-inverse {
+  display: inline-block;
+  max-width: 100%;
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding-right: $custom-select-padding-x \9;
+  color: $white;                                  // Custom
+  font-weight: $input-inverse-label-font-weight;  // Custom
+  vertical-align: middle;
+  background: $custom-select-inverse-bg url(#{$custom-select-inverse-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-inverse-bg
+  background-image: none \9;
+  background-size: $custom-select-bg-size;
+  border: $custom-select-border-width solid $custom-select-inverse-border-color;   // Custom - $custom-select-inverse-border-color
+  @include border-radius($custom-select-border-radius);
+  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  @include transition(all .15s ease-in-out);        // Custom
+
+ &:focus,
+ &:hover {
+    border-color: $input-inverse-border-focus;      // Custom
+    background-color: $gray-blue-200;               // Custom
+    color: $white;                                  // Custom
+    font-weight: $input-inverse-label-font-weight;  // Custom
+    outline: none;
+    @include box-shadow($custom-select-focus-box-shadow);
+    @include transition(all .15s ease-in-out);      // Custom
+  }
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}
+
+// File
+
+.custom-inverse-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: $custom-file-height;
+  padding: $custom-file-padding-x $custom-file-padding-y;
+  line-height: $custom-file-line-height;
+  color: $custom-inverse-file-color;              // Custom
+  font-weight: $input-inverse-label-font-weight;  // Custom
+  user-select: none;
+  background-color: $custom-inverse-file-bg;                                    // Custom
+  border: $custom-file-border-width solid $custom-inverse-file-border-color;    // Custom - $custom-inverse-file-border-color
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+  @include transition(all .15s ease-in-out);   // Custom
+
+  &::after {
+    content: $custom-file-placeholder;
+  }
+
+  &::before {
+    position: absolute;
+    top: -$custom-file-border-width;
+    right: -$custom-file-border-width;
+    bottom: -$custom-file-border-width;
+    z-index: 6;
+    display: block;
+    height: $custom-file-height;
+    padding: $custom-file-padding;               // Custom
+    text-transform: $text-casing;                // Custom
+    font-size: $font-size-xxs;                   // Custom
+    letter-spacing: 1px;                         // Custom  
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: $custom-file-button-label;
+    background-color: $custom-file-button-bg;    // Custom
+    border: $custom-file-border-width solid $brand-primary;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+
+  &:hover::before {
+    color: $white;
+      background-color: darken($brand-primary, 10%);
+          border-color: darken($brand-primary, 10%);
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $input-inverse-border-focus;               // Custom
+    background-color: $gray-blue-200;                        // Custom
+    color: $white;                                           // Custom
+    font-weight: $input-inverse-label-font-weight;           // Custom
+    outline: none;                                           // Custom
+    @include box-shadow($custom-select-focus-box-shadow);    // Custom
+  }
+}
+
+
+
+

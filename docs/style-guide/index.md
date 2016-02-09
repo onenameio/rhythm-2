@@ -649,57 +649,53 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
     <input type="password" class="form-inverse-control" id="exampleInputPassword1" placeholder="Password">
   </fieldset>
   <fieldset class="form-group form-inverse">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-inverse-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </fieldset>
-  <fieldset class="form-group form-inverse">
-    <label for="exampleSelect2">Example multiple select</label>
-    <select multiple class="form-inverse-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="custom-select-inverse">
+      <option selected>Open this select menu</option>
+      <option style="color: black;" value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
     </select>
   </fieldset>
   <fieldset class="form-group form-inverse">
     <label for="exampleTextarea">Example textarea</label>
     <textarea class="form-inverse-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
-  <label class="file">
-    <input type="file" id="file">
-    <span class="file-custom"></span>
-  </label>
+  <fieldset class="form-group">
+    <label class="custom-file">
+      <input type="file" id="file" class="custom-file-input">
+      <span class="custom-inverse-file-control"></span>
+    </label>
+  </fieldset>
   <div class="radio">
-    <label class="custom-control custom-radio">
-      <input id="radio1" name="radio" type="radio" class="custom-control-input">
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Option One Is This And That—Be Sure To Include Why It's Great</span>
+    <label class="custom-control-inverse custom-radio-inverse">
+      <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option one is this and that&mdash;be sure to include why it's great</span>
+    </label>
+  </div>
+  <div class="radio">
+    <label class="custom-control-inverse custom-radio-inverse">
+      <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option two can be something else and selecting it will deselect option one</span>
     </label>
   </div>
   <div class="radio disabled">
-    <label class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" disabled>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Check this custom checkbox</span>
+    <label class="custom-control-inverse custom-checkbox-inverse">
+      <input type="checkbox" class="custom-control-inverse-input" disabled>
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Option three is disabled</span>
     </label>
   </div>
   <div class="checkbox">
-    <label class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input">
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Check this custom checkbox</span>
+    <label class="custom-control-inverse custom-checkbox-inverse">
+      <input type="checkbox" class="custom-control-inverse-input">
+      <span class="custom-control-inverse-indicator"></span>
+      <span class="custom-control-inverse-description">Check this custom checkbox</span>
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
 {% endexample %}
 
 ## Using the Grid
