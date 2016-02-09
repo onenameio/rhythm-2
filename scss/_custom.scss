@@ -221,7 +221,8 @@ input[type="checkbox"], input[type="radio"] {
   -moz-appearance: none;
   -webkit-appearance: none;
 
- &:focus {
+ &:focus,
+ &:hover {
     border-color: $input-border-focus;        // Custom
     background-color: $gray-50;               // Custom
     color: $gray-800;                         // Custom
@@ -260,10 +261,75 @@ input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
 }
 
-.custom-file-control::before {
-  text-transform: $text-casing;                // Custom
-  font-size: $font-size-xxs;                   // Custom
-  letter-spacing: 1px;                         // Custom
-  border: 1px solid $brand-primary;
-  padding: .6875rem 2.5rem .75rem 2.5rem;
+.custom-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: $custom-file-height;
+  padding: $custom-file-padding-x $custom-file-padding-y;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  user-select: none;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+
+  &::after {
+    content: $custom-file-placeholder;
+  }
+
+  &::before {
+    position: absolute;
+    top: -$custom-file-border-width;
+    right: -$custom-file-border-width;
+    bottom: -$custom-file-border-width;
+    z-index: 6;
+    display: block;
+    height: $custom-file-height;
+    padding: .75rem 2.5rem .75rem 2.5rem;        // Custom
+    text-transform: $text-casing;                // Custom
+    font-size: $font-size-xxs;                   // Custom
+    letter-spacing: 1px;                         // Custom  
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: $custom-file-button-label;
+    background-color: $custom-file-button-bg;    // Custom
+    border: $custom-file-border-width solid $brand-primary;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+
+  &:hover::before {
+    color: $white;
+      background-color: darken($brand-primary, 10%);
+          border-color: darken($brand-primary, 25%);
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $input-border-focus;                       // Custom
+    background-color: $gray-50;                              // Custom
+    color: $gray-800;                                        // Custom
+    outline: none;                                           // Custom
+    @include box-shadow($custom-select-focus-box-shadow);    // Custom
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

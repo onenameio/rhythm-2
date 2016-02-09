@@ -419,7 +419,7 @@ $custom-select-focus-box-shadow:   inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px
 $custom-select-sm-padding-y: .2rem !default;
 $custom-select-sm-font-size: 75% !default;
 
-$custom-file-height:           2.5rem !default;
+$custom-file-height:           42px !default;                    // Custom
 $custom-file-width:            14rem !default;
 $custom-file-focus-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
 
@@ -427,7 +427,7 @@ $custom-file-padding-x:     .5rem !default;
 $custom-file-padding-y:     1rem !default;
 $custom-file-line-height:   1.5 !default;
 $custom-file-color:         #555 !default;
-$custom-file-bg:            #fff !default;
+$custom-file-bg:            $custom-select-bg !default;          // Custom
 $custom-file-border-width:  $border-width !default;
 $custom-file-border-color:  #ddd !default;
 $custom-file-border-radius: $border-radius !default;
@@ -438,12 +438,12 @@ $custom-file-button-color:  $white !default;                     // Custom
 $custom-file-button-bg:     $brand-primary !default;             // Custom
 
 // Input labels
-$input-label-padding-x:          1rem !default;     // Custom
-$input-label-padding-y:          .75rem !default;   // Custom
+$input-label-padding-x:          1rem !default;                  // Custom
+$input-label-padding-y:          .75rem !default;                // Custom
 
-$input-label-font-size:          $font-size-xs !default;  // Custom
-$input-label-font-weight:        400 !default;            // Custom
-$input-label-text-transform:     $text-casing !default;   // Custom
+$input-label-font-size:          $font-size-xs !default;         // Custom
+$input-label-font-weight:        400 !default;                   // Custom
+$input-label-text-transform:     $text-casing !default;          // Custom
 
 // Inverse forms - Custom
 $input-inverse-bg:                 $gray-blue-400 !default;        // Custom
