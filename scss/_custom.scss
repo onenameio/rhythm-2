@@ -62,7 +62,7 @@ a, a:focus {
     font-size: $font-size-xs;                               // Custom
     padding: .25rem 0 0 0;                                  // Custom
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    opacity: 0;
   }
 
   // Disabled and read-only inputs
@@ -124,7 +124,7 @@ a, a:focus {
     font-size: $font-size-xs;                 // Custom
     padding: .25rem 0 0 0;                    // Custom
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    opacity: 0;
   }
 
   // Disabled and read-only inputs
@@ -145,6 +145,7 @@ a, a:focus {
 }
 
 fieldset.form-group > label {
+  color: $gray-400;                              // Custom
   font-size: $font-size-xs;                      // Custom
   text-transform: $text-casing;                  // Custom
 }
@@ -197,66 +198,51 @@ input[type="checkbox"], input[type="radio"] {
 
 // Custom forms
 
-// File
+// Select
 //
-// Custom file input.
-.custom-file {
-  position: relative;
+// Replaces the browser default select with a custom one, mostly pulled from
+// http://primercss.io.
+//
+// Includes IE9-specific hacks (noted by ` \9`).
+
+.custom-select {
   display: inline-block;
-  font-weight: $btn-font-weight;
-  height: 42px;                       // Custom
-  text-transform: $text-casing;       // Custom
   max-width: 100%;
-  height: $custom-file-height;
-  cursor: pointer;
-}
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding-right: $custom-select-padding-x \9;
+  color: $input-color;                       // Custom
+  vertical-align: middle;
+  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $input-bg
+  background-image: none \9;
+  background-size: $custom-select-bg-size;
+  border: $custom-select-border-width solid $custom-select-border-color;
+  @include border-radius($custom-select-border-radius);
+  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
+  -moz-appearance: none;
+  -webkit-appearance: none;
 
-.custom-file-input {
-  min-width: $custom-file-width;
-  max-width: 100%;
-  margin: 0;
-  filter: alpha(opacity = 0);
-  opacity: 0;
+ &:focus {
+    border-color: $input-border-focus;        // Custom
+    background-color: $gray-50;               // Custom
+    color: $gray-800;                         // Custom
+    outline: none;
+    @include box-shadow($custom-select-focus-box-shadow);
+  }
 
-  &:focus ~ .custom-file-control {
-    @include box-shadow($custom-file-focus-box-shadow);
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
   }
 }
 
-.custom-file-control {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 5;
-  height: $custom-file-height;
-  padding: $custom-file-padding-x $custom-file-padding-y;
-  line-height: $custom-file-line-height;
-  color: $custom-file-color;
-  user-select: none;
-  background-color: $custom-file-bg;
-  border: $custom-file-border-width solid $custom-file-border-color;
-  @include border-radius($custom-file-border-radius);
-  @include box-shadow($custom-file-box-shadow);
+.custom-select-sm {
+  padding-top: $custom-select-padding-y;
+  padding-bottom: $custom-select-padding-y;
+  font-size: $custom-select-sm-font-size;
 
-  &::after {
-    content: $custom-file-placeholder;
-  }
-
-  &::before {
-    position: absolute;
-    top: -$custom-file-border-width;
-    right: -$custom-file-border-width;
-    bottom: -$custom-file-border-width;
-    z-index: 6;
-    display: block;
-    height: $custom-file-height;
-    padding: $custom-file-padding-x $custom-file-padding-y;
-    line-height: $custom-file-line-height;
-    color: $custom-file-button-color;
-    content: $custom-file-button-label;
-    background-color: $custom-file-button-bg;
-    border: $custom-file-border-width solid $custom-file-border-color;
-    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
-  }
+  // &:not([multiple]) {
+  //   height: 26px;
+  //   min-height: 26px;
+  // }
 }
+
