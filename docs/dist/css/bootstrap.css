@@ -5919,6 +5919,15 @@ a.text-danger:focus, a.text-danger:hover {
   }
 }
 
+h1.type-inverse, h2.type-inverse, h3.type-inverse, h4.type-inverse, h5.type-inverse, h6.type-inverse,
+.h1.type-inverse, .h2.type-inverse, .h3.type-inverse, .h4.type-inverse, .h5.type-inverse, .h6.type-inverse {
+  margin-bottom: .46875rem;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #fff;
+}
+
 .lead-out {
   font-size: .875rem;
   font-weight: 500;

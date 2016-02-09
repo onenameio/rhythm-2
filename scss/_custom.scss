@@ -7,6 +7,16 @@
 //
 //
 
+// Custom inverse headings
+h1.type-inverse, h2.type-inverse, h3.type-inverse, h4.type-inverse, h5.type-inverse, h6.type-inverse,
+.h1.type-inverse, .h2.type-inverse, .h3.type-inverse, .h4.type-inverse, .h5.type-inverse, .h6.type-inverse {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-inverse-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-inverse-color;
+}
+
 // Custom element
 .lead-out {
   font-size: $lead-out-font-size;
