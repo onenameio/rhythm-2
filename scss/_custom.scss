@@ -99,7 +99,7 @@ label {
 }
 
 // Temporary fix. This is an issue that needs to be resolved with bootstrap v4 see issue - https://github.com/twbs/bootstrap/issues/19095
-.check-radio-label-fix {
+.checkbox-radio-label-fix {
   padding-top: .25rem;                           // Custom
 }
 
@@ -190,11 +190,14 @@ fieldset.form-group.form-inverse > label {
   color: $gray-blue-50;                          // Custom
 }
 
+.checkbox-radio-label-inverse-fix {
+  padding-top: .25rem;                           // Custom
+  color: $gray-blue-50;                          // Custom
+}
+
 // Custom element
 .form-inverse-control-label {
-  width: 150px;                                  // Custom  
   color: $gray-blue-50;                          // Custom
-  font-weight: $input-inverse-label-font-weight; // Custom
   text-align: right;                             // Custom
   padding-right: $input-label-padding-x * 1.5;   // Custom
 }
