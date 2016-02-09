@@ -94,6 +94,10 @@ $spacers: (
     x: 0,
     y: 0
   ),
+  11: (
+    x: ($spacer-x / 1.5),
+    y: ($spacer-y / 1.5)
+  ),
   1: (
     x: $spacer-x,
     y: $spacer-y
@@ -217,19 +221,20 @@ $display2-weight: 300 !default;
 $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
-$headings-margin-bottom:         ($spacer / 2) !default;
+$headings-margin-bottom:         ($spacer-y) !default; // Cusome
 $headings-font-family:           inherit !default;
-$headings-font-weight:           400 !default;          // Custom
+$headings-font-weight:           400 !default;         // Custom
 $headings-line-height:           1.1 !default;
 $headings-color:                 inherit !default;
-$headings-inverse-font-weight:   300 !default;          // Custom
-$headings-inverse-color:         $white;                // Custom
+$headings-inverse-font-weight:   300 !default;         // Custom
+$headings-inverse-color:         $white;               // Custom
 
 $lead-font-size:   1.25rem !default;
 $lead-font-weight: 300 !default;
 
-$lead-out-font-size:    .875rem !default; // Custom
-$lead-out-font-weight:  500 !default;     // Custom
+$lead-out-font-size:       .875rem !default;             // Custom
+$lead-out-font-weight:      500 !default;                // Custom
+$lead-out-margin-bottom:    ($spacer-y * 2) !default;  // Custom
 
 $text-muted: $gray-400 !default;
 

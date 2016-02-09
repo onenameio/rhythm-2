@@ -32,10 +32,3 @@
     @include transition(all .15s ease-in-out);  // Custom
   }
 }
-@mixin headings($from: 1, $to: 6){
-    @for $i from $from through $to{
-      h#{$i}{
-        @content
-      }
-    }
-}
