@@ -498,7 +498,7 @@ output {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: .46875rem;
+  margin-bottom: 1.40625rem;
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
@@ -6041,35 +6041,11 @@ a.text-danger:focus, a.text-danger:hover {
 
 h1.type-inverse, h2.type-inverse, h3.type-inverse, h4.type-inverse, h5.type-inverse, h6.type-inverse,
 .h1.type-inverse, .h2.type-inverse, .h3.type-inverse, .h4.type-inverse, .h5.type-inverse, .h6.type-inverse {
-  margin-bottom: .46875rem;
+  margin-bottom: 1.40625rem;
   font-family: inherit;
   font-weight: 300;
   line-height: 1.1;
   color: #fff;
-}
-
-h1 {
-  margin-bottom: 1.40625rem;
-}
-
-h2 {
-  margin-bottom: 1.40625rem;
-}
-
-h3 {
-  margin-bottom: 1.40625rem;
-}
-
-h4 {
-  margin-bottom: 1.40625rem;
-}
-
-h5 {
-  margin-bottom: 1.40625rem;
-}
-
-h6 {
-  margin-bottom: 1.40625rem;
 }
 
 .lead-out {
