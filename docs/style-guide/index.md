@@ -359,6 +359,52 @@ All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` cla
 <h6>h6. Bootstrap heading</h6>
 {% endhighlight %}
 
+## Headings - Inverse
+
+All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
+
+<div class="container" style="background-color: #23262a; padding: 35px 25px;">
+<div class="bd-example bd-example-type">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td><h1 class="type-inverse">h1. Bootstrap heading</h1></td>
+        <td class="type-info"><small>weight 400 - 2.25rem / 36px</small></td>
+      </tr>
+      <tr>
+        <td><h2 class="type-inverse">h2. Bootstrap heading</h2></td>
+        <td class="type-info"><small>weight 400 - 1.875rem / 30px</small></td>
+      </tr>
+      <tr>
+        <td><h3 class="type-inverse">h3. Bootstrap heading</h3></td>
+        <td class="type-info"><small>weight 400 - 1.625rem / 26px</small></td>
+      </tr>
+      <tr>
+        <td><h4 class="type-inverse">h4. Bootstrap heading</h4></td>
+        <td class="type-info"><small>weight 400 - 1.25rem / 20px</small></td>
+      </tr>
+      <tr>
+        <td><h5 class="type-inverse">h5. Bootstrap heading</h5></td>
+        <td class="type-info"><small>weight 400 - 1rem / 16px</small></td>
+      </tr>
+      <tr>
+        <td><h6 class="type-inverse">h6. Bootstrap heading</h6></td>
+        <td class="type-info"><small>weight 400 - .875rem / 14px</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+{% highlight html %}
+<h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
+{% endhighlight %}
+
 ## Display headings
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
