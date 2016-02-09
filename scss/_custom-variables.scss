@@ -217,7 +217,7 @@ $display2-weight: 300 !default;
 $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 
-$headings-margin-bottom:         ($spacer-y) !default; // Cusome
+$headings-margin-bottom:         ($spacer-y / 1.5) !default; // Cusome
 $headings-font-family:           inherit !default;
 $headings-font-weight:           400 !default;         // Custom
 $headings-line-height:           1.1 !default;
