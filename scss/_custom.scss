@@ -246,3 +246,24 @@ input[type="checkbox"], input[type="radio"] {
   // }
 }
 
+// File
+//
+// Custom file input.
+
+.custom-file {
+  text-transform: capitalize!important;        // Custom
+  font-size: $font-size-base!important;        // Custom
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: $custom-file-height;
+  cursor: pointer;
+}
+
+.custom-file-control::before {
+  text-transform: $text-casing;                // Custom
+  font-size: $font-size-xxs;                   // Custom
+  letter-spacing: 1px;                         // Custom
+  border: 1px solid $brand-primary;
+  padding: .6875rem 2.5rem .75rem 2.5rem;
+}
