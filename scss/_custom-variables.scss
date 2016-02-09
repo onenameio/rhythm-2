@@ -94,6 +94,10 @@ $spacers: (
     x: 0,
     y: 0
   ),
+  11: (
+    x: ($spacer-x / 1.5),
+    y: ($spacer-y / 1.5)
+  ),
   1: (
     x: $spacer-x,
     y: $spacer-y
@@ -230,7 +234,7 @@ $lead-font-weight: 300 !default;
 
 $lead-out-font-size:       .875rem !default;             // Custom
 $lead-out-font-weight:      500 !default;                // Custom
-$lead-out-margin-bottom:    ($spacer-y * 1.5) !default;  // Custom
+$lead-out-margin-bottom:    ($spacer-y * 2) !default;  // Custom
 
 $text-muted: $gray-400 !default;
 
