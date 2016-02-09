@@ -3181,7 +3181,7 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input:disabled ~ .custom-control-description {
-  color: #767676;
+  color: #949494;
   cursor: not-allowed;
 }
 
@@ -3292,13 +3292,13 @@ input[type="button"].btn-block {
   height: 42px;
   padding: .5rem 1rem;
   line-height: 1.5;
-  color: #555;
+  color: #2e2e2e;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  border: 1px solid #e6e6e6;
 }
 
 .custom-file-control::after {
@@ -3318,7 +3318,7 @@ input[type="button"].btn-block {
   color: #fff;
   content: "Browse";
   background-color: #2275d7;
-  border: 1px solid #ddd;
+  border: 1px solid #e6e6e6;
 }
 
 .nav {
@@ -6007,6 +6007,35 @@ a, a:focus {
   cursor: not-allowed;
 }
 
+fieldset.form-group > label {
+  font-size: .75rem;
+  color: #949494;
+  text-transform: uppercase;
+}
+
+label {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.check-radio-label-fix {
+  padding-top: .25rem;
+}
+
+.checkbox label, .radio label {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.form-control-label {
+  height: 42px;
+  padding: .75rem 1rem;
+  margin-bottom: 0;
+  font-size: .75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .form-inverse-control {
   display: block;
   width: 100%;
@@ -6087,43 +6116,14 @@ a, a:focus {
   cursor: not-allowed;
 }
 
-fieldset.form-group > label {
-  font-size: .75rem;
-  color: #949494;
-  text-transform: uppercase;
-}
-
 fieldset.form-group.form-inverse > label {
   color: #515862;
-}
-
-label {
-  font-size: .75rem;
-  text-transform: uppercase;
-}
-
-.check-radio-label-fix {
-  padding-top: .25rem;
-}
-
-.checkbox label, .radio label {
-  font-size: 1rem;
-  text-transform: capitalize;
-}
-
-.form-control-label {
-  height: 42px;
-  padding: .75rem 1rem;
-  margin-bottom: 0;
-  font-size: .75rem;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 .form-inverse-control-label {
   width: 150px;
   padding-right: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #515862;
   text-align: right;
 }
@@ -6145,6 +6145,9 @@ label {
   -webkit-background-size: 8px 10px;
           background-size: 8px 10px;
   border: 1px solid #e6e6e6;
+  -webkit-transition: all .15s ease-in-out;
+       -o-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out;
 
      -moz-appearance: none;
 }
@@ -6158,12 +6161,6 @@ label {
 
 .custom-select::-ms-expand {
   opacity: 0;
-}
-
-.custom-select-sm {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  font-size: 75%;
 }
 
 .custom-file {
@@ -6185,13 +6182,16 @@ label {
   height: 42px;
   padding: .5rem 1rem;
   line-height: 1.5;
-  color: #555;
+  color: #2e2e2e;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  border: 1px solid #e6e6e6;
+  -webkit-transition: all .15s ease-in-out;
+       -o-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out;
 }
 
 .custom-file-control::after {
@@ -6220,7 +6220,7 @@ label {
 .custom-file-control:hover::before {
   color: #fff;
   background-color: #1b5dab;
-  border-color: #113969;
+  border-color: #1b5dab;
 }
 
 .custom-file-control:focus, .custom-file-control:hover {
@@ -6243,7 +6243,10 @@ label {
   background-image: none \9;
   -webkit-background-size: 8px 10px;
           background-size: 8px 10px;
-  border: 1px solid #3a3f46;
+  border: 1px solid #32373d;
+  -webkit-transition: all .15s ease-in-out;
+       -o-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out;
 
      -moz-appearance: none;
 }
@@ -6260,23 +6263,7 @@ label {
   opacity: 0;
 }
 
-.custom-select-sm {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  font-size: 75%;
-}
-
-.custom-file {
-  position: relative;
-  display: inline-block;
-  max-width: 100%;
-  height: 42px;
-  font-size: 1rem !important;
-  text-transform: capitalize !important;
-  cursor: pointer;
-}
-
-.custom-file-control {
+.custom-inverse-file-control {
   position: absolute;
   top: 0;
   right: 0;
@@ -6284,21 +6271,25 @@ label {
   z-index: 5;
   height: 42px;
   padding: .5rem 1rem;
+  font-weight: 300;
   line-height: 1.5;
-  color: #555;
+  color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: #32373d;
+  border: 1px solid #32373d;
+  -webkit-transition: all .15s ease-in-out;
+       -o-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out;
 }
 
-.custom-file-control::after {
+.custom-inverse-file-control::after {
   content: "Choose file...";
 }
 
-.custom-file-control::before {
+.custom-inverse-file-control::before {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -6317,16 +6308,17 @@ label {
   border: 1px solid #2275d7;
 }
 
-.custom-file-control:hover::before {
+.custom-inverse-file-control:hover::before {
   color: #fff;
   background-color: #1b5dab;
-  border-color: #113969;
+  border-color: #1b5dab;
 }
 
-.custom-file-control:focus, .custom-file-control:hover {
-  color: #2e2e2e;
-  background-color: #fafafa;
-  border-color: #e6e6e6;
+.custom-inverse-file-control:focus, .custom-inverse-file-control:hover {
+  font-weight: 300;
+  color: #fff;
+  background-color: #3a3f46;
+  border-color: #42484f;
   outline: none;
 }
 /*# sourceMappingURL=bootstrap.css.map */

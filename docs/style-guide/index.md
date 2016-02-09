@@ -656,14 +656,14 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
       <option value="3">Three</option>
     </select>
   </fieldset>
-  <fieldset class="form-group">
+  <fieldset class="form-group form-inverse">
     <label for="exampleTextarea">Example textarea</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <textarea class="form-inverse-control" id="exampleTextarea" rows="3"></textarea>
   </fieldset>
   <fieldset class="form-group">
     <label class="custom-file">
       <input type="file" id="file" class="custom-file-input">
-      <span class="custom-file-control"></span>
+      <span class="custom-inverse-file-control"></span>
     </label>
   </fieldset>
   <div class="radio">
