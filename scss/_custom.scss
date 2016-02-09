@@ -212,10 +212,10 @@ input[type="checkbox"], input[type="radio"] {
   padding-right: $custom-select-padding-x \9;
   color: $input-color;                       // Custom
   vertical-align: middle;
-  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $input-bg
+  background: $custom-select-bg url(#{$custom-select-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-bg
   background-image: none \9;
   background-size: $custom-select-bg-size;
-  border: $custom-select-border-width solid $custom-select-border-color;
+  border: $custom-select-border-width solid $custom-select-border-color;    // Custom - $custom-select-border-color
   @include border-radius($custom-select-border-radius);
   // Use vendor prefixes as `appearance` isn't part of the CSS spec.
   -moz-appearance: none;
@@ -317,7 +317,118 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
+// Inverse
+.custom-select-inverse {
+  display: inline-block;
+  max-width: 100%;
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding-right: $custom-select-padding-x \9;
+  color: $white;                             // Custom
+  vertical-align: middle;
+  background: $custom-select-inverse-bg url(#{$custom-select-inverse-indicator}) no-repeat right $custom-select-padding-x center;    // Custom - $custom-select-inverse-bg
+  background-image: none \9;
+  background-size: $custom-select-bg-size;
+  border: $custom-select-border-width solid $custom-select-inverse-border-color;   // Custom - $custom-select-inverse-border-color
+  @include border-radius($custom-select-border-radius);
+  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
+  -moz-appearance: none;
+  -webkit-appearance: none;
 
+ &:focus,
+ &:hover {
+    border-color: $input-border-focus;        // Custom
+    background-color: $gray-50;               // Custom
+    color: $gray-800;                         // Custom
+    outline: none;
+    @include box-shadow($custom-select-focus-box-shadow);
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}
+
+.custom-select-sm {
+  padding-top: $custom-select-padding-y;
+  padding-bottom: $custom-select-padding-y;
+  font-size: $custom-select-sm-font-size;
+
+  // &:not([multiple]) {
+  //   height: 26px;
+  //   min-height: 26px;
+  // }
+}
+
+// File
+//
+// Custom file input.
+
+.custom-file {
+  text-transform: capitalize!important;        // Custom
+  font-size: $font-size-base!important;        // Custom
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: $custom-file-height;
+  cursor: pointer;
+}
+
+.custom-file-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: $custom-file-height;
+  padding: $custom-file-padding-x $custom-file-padding-y;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  user-select: none;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+
+  &::after {
+    content: $custom-file-placeholder;
+  }
+
+  &::before {
+    position: absolute;
+    top: -$custom-file-border-width;
+    right: -$custom-file-border-width;
+    bottom: -$custom-file-border-width;
+    z-index: 6;
+    display: block;
+    height: $custom-file-height;
+    padding: .75rem 2.5rem .75rem 2.5rem;        // Custom
+    text-transform: $text-casing;                // Custom
+    font-size: $font-size-xxs;                   // Custom
+    letter-spacing: 1px;                         // Custom  
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: $custom-file-button-label;
+    background-color: $custom-file-button-bg;    // Custom
+    border: $custom-file-border-width solid $brand-primary;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+
+  &:hover::before {
+    color: $white;
+      background-color: darken($brand-primary, 10%);
+          border-color: darken($brand-primary, 25%);
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $input-border-focus;                       // Custom
+    background-color: $gray-50;                              // Custom
+    color: $gray-800;                                        // Custom
+    outline: none;                                           // Custom
+    @include box-shadow($custom-select-focus-box-shadow);    // Custom
+  }
+}
 
 
 
