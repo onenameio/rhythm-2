@@ -6049,6 +6049,7 @@ h1.type-inverse, h2.type-inverse, h3.type-inverse, h4.type-inverse, h5.type-inve
 }
 
 .lead-out {
+  margin-bottom: 1.40625rem;
   font-size: .875rem;
   font-weight: 500;
   color: #515862;
