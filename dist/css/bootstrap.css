@@ -5545,6 +5545,66 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-bottom: 2.8125rem !important;
 }
 
+.m-a-4 {
+  margin: 3.75rem 3.75rem !important;
+}
+
+.m-t-4 {
+  margin-top: 3.75rem !important;
+}
+
+.m-r-4 {
+  margin-right: 3.75rem !important;
+}
+
+.m-b-4 {
+  margin-bottom: 3.75rem !important;
+}
+
+.m-l-4 {
+  margin-left: 3.75rem !important;
+}
+
+.m-x-4 {
+  margin-right: 3.75rem !important;
+  margin-left: 3.75rem !important;
+}
+
+.m-y-4 {
+  margin-top: 3.75rem !important;
+  margin-bottom: 3.75rem !important;
+}
+
+.m-a-5 {
+  margin: 4.6875rem 4.6875rem !important;
+}
+
+.m-t-5 {
+  margin-top: 4.6875rem !important;
+}
+
+.m-r-5 {
+  margin-right: 4.6875rem !important;
+}
+
+.m-b-5 {
+  margin-bottom: 4.6875rem !important;
+}
+
+.m-l-5 {
+  margin-left: 4.6875rem !important;
+}
+
+.m-x-5 {
+  margin-right: 4.6875rem !important;
+  margin-left: 4.6875rem !important;
+}
+
+.m-y-5 {
+  margin-top: 4.6875rem !important;
+  margin-bottom: 4.6875rem !important;
+}
+
 .p-a-0 {
   padding: 0 0 !important;
 }
@@ -5663,6 +5723,66 @@ a.bg-danger:focus, a.bg-danger:hover {
 .p-y-3 {
   padding-top: 2.8125rem !important;
   padding-bottom: 2.8125rem !important;
+}
+
+.p-a-4 {
+  padding: 3.75rem 3.75rem !important;
+}
+
+.p-t-4 {
+  padding-top: 3.75rem !important;
+}
+
+.p-r-4 {
+  padding-right: 3.75rem !important;
+}
+
+.p-b-4 {
+  padding-bottom: 3.75rem !important;
+}
+
+.p-l-4 {
+  padding-left: 3.75rem !important;
+}
+
+.p-x-4 {
+  padding-right: 3.75rem !important;
+  padding-left: 3.75rem !important;
+}
+
+.p-y-4 {
+  padding-top: 3.75rem !important;
+  padding-bottom: 3.75rem !important;
+}
+
+.p-a-5 {
+  padding: 4.6875rem 4.6875rem !important;
+}
+
+.p-t-5 {
+  padding-top: 4.6875rem !important;
+}
+
+.p-r-5 {
+  padding-right: 4.6875rem !important;
+}
+
+.p-b-5 {
+  padding-bottom: 4.6875rem !important;
+}
+
+.p-l-5 {
+  padding-left: 4.6875rem !important;
+}
+
+.p-x-5 {
+  padding-right: 4.6875rem !important;
+  padding-left: 4.6875rem !important;
+}
+
+.p-y-5 {
+  padding-top: 4.6875rem !important;
+  padding-bottom: 4.6875rem !important;
 }
 
 .pos-f-t {
