@@ -696,7 +696,73 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 {% endexample %}
+
+## Using the Grid - Inverse
+
+For more structured form layouts, you can utilize Bootstrap’s predefined grid classes (or mixins). Add the .row class to form groups and use the `.col-*` classes to specify the width of your labels and controls. To vertically center the labels with the textual inputs—nearly anything with `.form-control`—use the `.form-control-label` class.
+
+{% example html %}
+<div class="container" style="background-color: #23262a; padding: 35px 25px;">
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 form-inverse-control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-inverse-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 form-inverse-control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-inverse-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 checkbox-radio-label-inverse-fix">Radios</label>
+    <div class="col-sm-10">
+       <div class="radio">
+        <label class="custom-control-inverse custom-radio-inverse">
+          <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+          <span class="custom-control-inverse-indicator"></span>
+          <span class="custom-control-inverse-description">Option one is this and that&mdash;be sure to include why it's great</span>
+        </label>
+      </div>
+      <div class="radio">
+        <label class="custom-control-inverse custom-radio-inverse">
+          <input id="radio1" name="radio" type="radio" class="custom-control-inverse-input">
+          <span class="custom-control-inverse-indicator"></span>
+          <span class="custom-control-inverse-description">Option two can be something else and selecting it will deselect option one</span>
+        </label>
+      </div>
+      <div class="radio disabled">
+        <label class="custom-control-inverse custom-checkbox-inverse">
+          <input type="checkbox" class="custom-control-inverse-input" disabled>
+          <span class="custom-control-inverse-indicator"></span>
+          <span class="custom-control-inverse-description">Option three is disabled</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 checkbox-radio-label-inverse-fix">Checkbox</label>
+    <div class="col-sm-10 checkbox">
+      <label class="custom-control-inverse custom-checkbox-inverse">
+        <input type="checkbox" class="custom-control-inverse-input">
+        <span class="custom-control-inverse-indicator"></span>
+        <span class="custom-control-inverse-description">Check me out</span>
+      </label>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+</div>
+{% endexample %}
+
 
 ## Using the Grid
 
@@ -718,36 +784,39 @@ For more structured form layouts, you can utilize Bootstrap’s predefined grid 
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2 check-radio-label-fix">Radios</label>
+    <label class="col-sm-2 checkbox-radio-label-fix">Radios</label>
     <div class="col-sm-10">
       <div class="radio">
-        <label>
-          <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked="">
-          Option one is this and that—be sure to include why it's great
+        <label class="custom-control custom-radio">
+          <input id="radio1" name="radio" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
         </label>
       </div>
-      <div class="radio ">
-        <label>
-          <input type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
+      <div class="radio">
+        <label class="custom-control custom-radio">
+          <input id="radio1" name="radio" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
         </label>
       </div>
       <div class="radio disabled">
-        <label>
-          <input type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled="">
-          Option three is disabled
+        <label class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" disabled>
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Option three is disabled</span>
         </label>
       </div>
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2 check-radio-label-fix">Checkbox</label>
-    <div class="col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
-      </div>
+    <label class="col-sm-2 checkbox-radio-label-fix">Checkbox</label>
+    <div class="col-sm-10 checkbox">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Check me out</span>
+      </label>
     </div>
   </div>
   <div class="form-group row">
