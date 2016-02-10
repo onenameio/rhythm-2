@@ -6607,6 +6607,9 @@ button.list-group-item {
   color: #949494;
   text-align: inherit;
   text-transform: lowercase;
+  -webkit-transition: all .15s ease-in-out;
+       -o-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out;
 }
 
 a.list-group-item .list-group-item-heading,
@@ -6618,7 +6621,7 @@ a.list-group-item:focus, a.list-group-item:hover,
 button.list-group-item:focus,
 button.list-group-item:hover {
   color: #2275d7;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 /*# sourceMappingURL=bootstrap.css.map */
