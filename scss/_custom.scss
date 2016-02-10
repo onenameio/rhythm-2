@@ -536,10 +536,31 @@ fieldset.form-group.form-inverse > label {
 }
 
 
-// Utilities
+// List group
 //
-// Spacing
-// Spacing - margin-bottom
+// 
 
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
 
+a.list-group-item,
+button.list-group-item {
+  width: 100%;
+  color: $list-group-link-color;
+  text-align: inherit;
+  text-transform: lowercase;
+
+  .list-group-item-heading {
+    color: $list-group-link-heading-color;
+  }
+
+  // Hover state
+  @include hover-focus {
+    color: $list-group-link-hover-color;
+    text-decoration: underline;
+    background-color: $list-group-hover-bg;
+  }
+}
 
