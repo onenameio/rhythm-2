@@ -6270,7 +6270,7 @@ label {
   font-size: .75rem;
   color: #515862;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-inverse-control::-moz-placeholder {
@@ -6278,7 +6278,7 @@ label {
   font-size: .75rem;
   color: #515862;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-inverse-control:-ms-input-placeholder {
@@ -6286,7 +6286,7 @@ label {
   font-size: .75rem;
   color: #515862;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-inverse-control::placeholder {
@@ -6294,7 +6294,7 @@ label {
   font-size: .75rem;
   color: #515862;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-inverse-control:disabled, .form-inverse-control[readonly] {
