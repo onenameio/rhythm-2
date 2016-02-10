@@ -768,6 +768,27 @@ $list-group-link-color:         #555 !default;
 $list-group-link-hover-color:   $list-group-link-color !default;
 $list-group-link-heading-color: #333 !default;
 
+// List group
+
+$list-groupbg:                 transparent !default;              // Custom
+$list-groupborder-color:       $gray-400 !default;                // Custom
+$list-groupborder-width:       0 !default;                        // Custom
+$list-groupborder-radius:      0 !default;                        // Custom
+
+$list-grouphover-bg:           transparent !default;              // Custom
+$list-groupactive-color:       $component-active-color !default;
+$list-groupactive-bg:          tansparent !default;               // Custom
+$list-groupactive-border:      0 !default;                        // Custom
+$list-groupactive-text-color:  $component-active-color !default;
+
+$list-groupdisabled-color:      $gray-light !default;
+$list-groupdisabled-bg:         $gray-lighter !default;
+$list-groupdisabled-text-color: $list-group-disabled-color !default;
+
+$list-grouplink-color:          #555 !default;
+$list-grouplink-hover-color:    $list-group-link-color !default;
+$list-grouplink-heading-color:  #333 !default;
+
 
 // Image thumbnails
 
