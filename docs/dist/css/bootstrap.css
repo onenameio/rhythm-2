@@ -6161,7 +6161,7 @@ a, a:focus {
   font-size: .75rem;
   color: #c7c7c7;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-control::-moz-placeholder {
@@ -6169,7 +6169,7 @@ a, a:focus {
   font-size: .75rem;
   color: #c7c7c7;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
@@ -6177,7 +6177,7 @@ a, a:focus {
   font-size: .75rem;
   color: #c7c7c7;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-control::placeholder {
@@ -6185,7 +6185,7 @@ a, a:focus {
   font-size: .75rem;
   color: #c7c7c7;
   text-transform: uppercase;
-  opacity: 0;
+  opacity: 1;
 }
 
 .form-control:disabled, .form-control[readonly] {
