@@ -176,6 +176,7 @@ label {
     color: $input-inverse-color-placeholder;  // Custom
     text-transform: $text-casing;             // Custom
     font-size: $font-size-xs;                 // Custom
+    font-weight: 400;                         // Custom
     padding: .25rem 0 0 0;                    // Custom
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
