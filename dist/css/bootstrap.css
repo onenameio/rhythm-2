@@ -6607,9 +6607,6 @@ button.list-group-item {
   color: #949494;
   text-align: inherit;
   text-transform: lowercase;
-  -webkit-transition: all .15s ease-in-out;
-       -o-transition: all .15s ease-in-out;
-          transition: all .15s ease-in-out;
 }
 
 a.list-group-item .list-group-item-heading,

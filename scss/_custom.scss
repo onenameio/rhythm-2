@@ -551,7 +551,6 @@ button.list-group-item {
   color: $list-group-link-color;
   text-align: inherit;
   text-transform: lowercase;                   // Custom
-  @include transition(all .15s ease-in-out);   // Custom
 
   .list-group-item-heading {
     color: $list-group-link-heading-color;
